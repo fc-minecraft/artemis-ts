@@ -13,18 +13,42 @@ enum FourDirectionUpDown {
 // global variables
 const communicationsTimeout = 100;
 const start_game_position = world(0, 7, 0)
-const signal_block_type = WHITE_CONCRETE
+const default_signal_block = WHITE_CONCRETE
 
 
 //%  block="Artemis: Moon Journey" weight=200 color=#0B3D91 icon="\u1F680"
 namespace artemis {
 
     /**
-     * Start Game
+     * Start Game Player 1
      */
     //% block="i'm ready"
-    export function startGame(): void{
-        signalBlock(0, 0)
+    export function startGameP1(): void {
+        signalBlock(0, 1, default_signal_block)
+    }
+
+    /**
+     * Start Game Player 2
+     */
+    //% block="i'm ready"
+    export function startGameP2(): void {
+        signalBlock(0, 2, default_signal_block)
+    }
+
+    /**
+     * Start Game Player 3
+     */
+    //% block="i'm ready"
+    export function startGameP3(): void {
+        signalBlock(0, 3, default_signal_block)
+    }
+
+    /**
+     * Start Game Player 4
+     */
+    //% block="i'm ready"
+    export function startGameP4(): void {
+        signalBlock(0, 4, default_signal_block)
     }
     
     /**
@@ -45,9 +69,26 @@ namespace artemis {
 
     }
 
+    /**
+     * Mars (Activity 11) take picture
+     */
+    //% block="take picture"
+    export function takePictureA11(): void {
+        signalBlock(11, 1, default_signal_block)
+    }
+
+    /**
+     * Mine Asteroid (Activity 12)
+     */
+    //% block="take picture"
+    export function mineAsteroidA12(): void {
+        signalBlock(12, 1, default_signal_block)
+    }
+
+
     // helper functions
-    function signalBlock(activity: number, player: number) : void{
-        blocks.place(signal_block_type, world(player, 7, activity))
+    function signalBlock(activity: number, player: number, block: Block) : void{
+        blocks.place(block, world(0, activity, player))
         loops.pause(communicationsTimeout)
     }
 
