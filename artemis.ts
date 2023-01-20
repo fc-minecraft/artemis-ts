@@ -57,7 +57,6 @@ namespace artemis {
     //% block="agent move %d by %n"
     export function agentMoveFoot1(d: FourDirectionUpDown, n: number): void {
         agent.move(d, n)
-
     }
 
     /**
@@ -80,7 +79,7 @@ namespace artemis {
     /**
      * Mine Asteroid (Activity 12)
      */
-    //% block="take picture"
+    //% block="mine asteroid"
     export function mineAsteroidA12(): void {
         signalBlock(12, 1, default_signal_block)
     }
