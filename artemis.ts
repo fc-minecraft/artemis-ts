@@ -24,7 +24,7 @@ namespace artemis {
      */
     //% block="i'm ready"
     export function startGameP1(): void {
-        signalBlock(0, 1, default_signal_block)
+        signalBlock(0, 0, 1, default_signal_block)
     }
 
     /**
@@ -32,7 +32,7 @@ namespace artemis {
      */
     //% block="i'm ready"
     export function startGameP2(): void {
-        signalBlock(0, 2, default_signal_block)
+        signalBlock(0, 0, 2, default_signal_block)
     }
 
     /**
@@ -40,7 +40,7 @@ namespace artemis {
      */
     //% block="i'm ready"
     export function startGameP3(): void {
-        signalBlock(0, 3, default_signal_block)
+        signalBlock(0, 0, 3, default_signal_block)
     }
 
     /**
@@ -48,7 +48,7 @@ namespace artemis {
      */
     //% block="i'm ready"
     export function startGameP4(): void {
-        signalBlock(0, 4, default_signal_block)
+        signalBlock(0, 0, 4, default_signal_block)
     }
     
     /**
@@ -73,7 +73,7 @@ namespace artemis {
      */
     //% block="take picture"
     export function takePictureA11(): void {
-        signalBlock(11, 1, default_signal_block)
+        signalBlock(0, 11, 1, default_signal_block)
     }
 
     /**
@@ -81,13 +81,37 @@ namespace artemis {
      */
     //% block="mine asteroid"
     export function mineAsteroidA12(): void {
-        signalBlock(12, 1, default_signal_block)
+        signalBlock(0, 12, 1, default_signal_block)
+    }
+
+    /**
+     * Lunar Garden 1 (Activity 13)
+     */
+    //% block="plant seed 1"
+    export function lundarGarden1A13(): void {
+        signalBlock(0, 12, 1, default_signal_block)
+    }
+
+    /**
+     * Lunar Garden 2 (Activity 13)
+     */
+    //% block="plant seed 2"
+    export function lundarGarden2A13(): void {
+        signalBlock(1, 12, 1, default_signal_block)
+    }
+
+    /**
+     * Lunar Garden 3 (Activity 13)
+     */
+    //% block="plant seed 3"
+    export function lundarGarden3A13(): void {
+        signalBlock(2, 12, 1, default_signal_block)
     }
 
 
     // helper functions
-    function signalBlock(activity: number, player: number, block: Block) : void{
-        blocks.place(block, world(0, activity, player))
+    function signalBlock(step: number, activity: number, player: number, block: Block) : void{
+        blocks.place( block, world(step, activity, player))
         loops.pause(communicationsTimeout)
     }
 
