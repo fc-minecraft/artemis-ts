@@ -88,7 +88,7 @@ namespace artemis {
      * Lunar Garden 1 (Activity 13)
      */
     //% block="plant seed 1"
-    export function lundarGarden1A13(): void {
+    export function lunarGarden1A13(): void {
         signalBlock(0, 13, 1, default_signal_block)
     }
 
@@ -96,7 +96,7 @@ namespace artemis {
      * Lunar Garden 2 (Activity 13)
      */
     //% block="plant seed 2"
-    export function lundarGarden2A13(): void {
+    export function lunarGarden2A13(): void {
         signalBlock(1, 13, 1, default_signal_block)
     }
 
@@ -104,7 +104,7 @@ namespace artemis {
      * Lunar Garden 3 (Activity 13)
      */
     //% block="plant seed 3"
-    export function lundarGarden3A13(): void {
+    export function lunarGarden3A13(): void {
         signalBlock(2, 13, 1, default_signal_block)
     }
 
