@@ -89,7 +89,7 @@ namespace artemis {
      */
     //% block="plant seed 1"
     export function lundarGarden1A13(): void {
-        signalBlock(0, 12, 1, default_signal_block)
+        signalBlock(0, 13, 1, default_signal_block)
     }
 
     /**
@@ -97,7 +97,7 @@ namespace artemis {
      */
     //% block="plant seed 2"
     export function lundarGarden2A13(): void {
-        signalBlock(1, 12, 1, default_signal_block)
+        signalBlock(1, 13, 1, default_signal_block)
     }
 
     /**
@@ -105,7 +105,7 @@ namespace artemis {
      */
     //% block="plant seed 3"
     export function lundarGarden3A13(): void {
-        signalBlock(2, 12, 1, default_signal_block)
+        signalBlock(2, 13, 1, default_signal_block)
     }
 
 
