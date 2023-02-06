@@ -22,7 +22,7 @@ namespace artemis {
     /**
      * Start Game Player 1
      */
-    //% block="i'm ready"
+    //% block="go for launch"
     export function startGameP1(): void {
         signalBlock(0, 0, 1, default_signal_block)
     }
@@ -30,7 +30,7 @@ namespace artemis {
     /**
      * Start Game Player 2
      */
-    //% block="i'm ready"
+    //% block="go for launch"
     export function startGameP2(): void {
         signalBlock(0, 0, 2, default_signal_block)
     }
@@ -38,7 +38,7 @@ namespace artemis {
     /**
      * Start Game Player 3
      */
-    //% block="i'm ready"
+    //% block="go for launch"
     export function startGameP3(): void {
         signalBlock(0, 0, 3, default_signal_block)
     }
@@ -46,7 +46,7 @@ namespace artemis {
     /**
      * Start Game Player 4
      */
-    //% block="i'm ready"
+    //% block="go for launch"
     export function startGameP4(): void {
         signalBlock(0, 0, 4, default_signal_block)
     }
@@ -69,7 +69,7 @@ namespace artemis {
     }
 
     /**
-     * Mars (Activity 11) take picture
+     * Mars Recon (Activity 11)
      */
     //% block="take picture"
     export function takePictureA11(): void {
@@ -77,7 +77,7 @@ namespace artemis {
     }
 
     /**
-     * Mine Asteroid (Activity 12)
+     * Asteroid Mining (Activity 12)
      */
     //% block="mine asteroid"
     export function mineAsteroidA12(): void {
