@@ -43,32 +43,38 @@ enum matrix_y_axis_full {
 }
 
 enum matrix_x_axis_full {
-    A,
-    B,
-    C,
-    D,
-    E,
-    F,
-    G,
-    H,
-    I,
-    J,
-    K,
-    L,
-    M,
-    N,
-    O,
-    P,
-    Q,
-    R,
-    S,
-    T,
-    U,
-    V,
-    W,
-    X,
-    Y,
-    Z
+    //% block="A"
+    A = 17, // LOG
+    //% block="B"
+    B = 236, // CONCRETE
+    //% block="C"
+    C = 159, // TERRACOTTA
+    //% block="D"
+    D = 241, // STAINED GLASS
+    //% block="E"
+    E = 160,
+    //% block="F"
+    F = 44, // STONE_SLAB
+    //% block="G"
+    G = 182, //STONE_SLAB2
+    //% block="H"
+    H = 417,  //STONE_SLAB3
+    //% block="I"
+    I = 43, // DOUBLE_STONE_SLAB
+    //% block="J"
+    J = 181, // DOUBLE_STONE_SLAB2
+    //% block="K"
+    K = 422, // DOUBLE_STONE_SLAB3
+    //% block="L"
+    L = 421, // STONE_SLAB4
+    //% block="M"
+    M = 423, // DOUBLE_STONE_SLAB4
+    //% block="N"
+    N = 158, // WOODEN_SLAB
+    //% block="O"
+    O = 157, // DOUBLE_WOODEN_SLAB
+    //% block="P"
+    P = 218 // SHULKER_BOX
 }
 
 // global variables
