@@ -222,7 +222,7 @@ namespace artemis {
      */
     //% block="set location to $x_axis $y_axis"
     export function setLocationA15(x_axis: matrix_x_axis_full, y_axis: matrix_y_axis_full): void {
-        signalBlock(0, 15, 1, default_signal_block)
+        signalBlock(0, 15, 1, blocks.blockWithData(blocks.blockById(x_axis), y_axis))
     }
 
     /**
