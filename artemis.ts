@@ -75,7 +75,7 @@ const start_game_position = world(0, 7, 0)
 const default_signal_block = WHITE_CONCRETE
 
 
-//%  block="Artemis: Moon Journey" weight=200 color=#0B3D91 icon="\u1F680"
+//%  block="Artemis: Moon Journey" weight=200 color=#0B3D91 icon="\uf186"
 namespace artemis {
 
     /**
