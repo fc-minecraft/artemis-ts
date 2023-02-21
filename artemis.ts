@@ -43,30 +43,30 @@ enum matrix_y_axis_full {
 }
 
 enum matrix_x_axis_full {
-    //% block="A"
-    LOG_OAK, // LOG
-    //% block="B"
-    WHITE_CONCRETE, // CONCRETE
-    //% block="C"
-    WHITE_TERRACOTTA, // TERRACOTTA
-    //% block="D"
-    WHITE_STAINED_GLASS, // STAINED GLASS
-    //% block="E"
-    WHITE_STAINED_GLASS_PANE, // STAINED GLASS PANE
-    //% block="F"
-    STONE_SLAB, // STONE_SLAB
-    //% block="G"
-    RED_SANDSTONE_SLAB, //STONE_SLAB2
-    //% block="H"
-    OAK_WOOD_SLAB,  // WOODEN_SLAB
-    //% block="I"
-    DOUBLE_STONE_SLAB, // DOUBLE_STONE_SLAB
-    //% block="J"
-    DOUBLE_RED_SANDSTONE_SLAB, // DOUBLE_STONE_SLAB2
-    //% block="K"
-    DOUBLE_WOODEN_SLAB, // DOUBLE_WOODEN_SLAB
-    //% block="L"
-    WHITE_SHULKER_BOX // SHULKER_BOX
+    //% block="A"  
+    LogOak = 17, // LOG
+    //% block="B"  
+    WhiteConcrete = 236, // CONCRETE
+    //% block="C"  
+    WhiteTerracotta = 159, // TERRACOTTA
+    //% block="D"  
+    WhiteStainedGlass = 241, // STAINED GLASS
+    //% block="E"  
+    WhiteStainedGlassPane = 160, // STAINED GLASS PANE
+    //% block="F"  
+    StoneSlab = 44, // STONE_SLAB
+    //% block="G"  
+    RedSandstoneSlab = 182, //STONE_SLAB2
+    //% block="H"  
+    OakWoodSlab = 158,  // WOODEN_SLAB
+    //% block="I"  
+    DoubleStoneSlab = 43, // DOUBLE_STONE_SLAB
+    //% block="J"  
+    DoubleRedSandstoneSlab = 181, // DOUBLE_STONE_SLAB2
+    //% block="K"  
+    DoubleWoodenSlab = 157, // DOUBLE_WOODEN_SLAB
+    //% block="L"  
+    WhiteShulkerBox = 218 // SHULKER_BOX
 }
 
 // global variables
@@ -206,7 +206,7 @@ namespace artemis {
      */
     //% block="take picture at $x_axis $y_axis"
     export function takePictureA14(x_axis: matrix_x_axis_full, y_axis: matrix_y_axis_full): void {
-        signalBlock(0, 14, 1, blocks.blockWithData(x_axis, y_axis))
+        signalBlock(0, 14, 1, blocks.blockWithData(blocks.blockById(x_axis), y_axis))
     }
 
     /**
@@ -214,7 +214,7 @@ namespace artemis {
      */
     //% block="set location to $x_axis $y_axis"
     export function setLocationA15(x_axis: matrix_x_axis_full, y_axis: matrix_y_axis_full): void {
-        signalBlock(0, 15, 1, blocks.blockWithData(x_axis, y_axis))
+        signalBlock(0, 15, 1, blocks.blockWithData(blocks.blockById(x_axis), y_axis))
     }
 
     /**
@@ -222,7 +222,7 @@ namespace artemis {
      */
     //% block="mark location to $x_axis $y_axis"
     export function markLocationA17(x_axis: matrix_x_axis_full, y_axis: matrix_y_axis_full): void {
-        signalBlock(0, 17, 1, blocks.blockWithData(x_axis, y_axis))
+        signalBlock(0, 17, 1, blocks.blockWithData(blocks.blockById(x_axis), y_axis))
     }
 
     /**
@@ -230,7 +230,7 @@ namespace artemis {
      */
     //% block="deploy CubeSat to $x_axis $y_axis"
     export function deployCubsatA18(x_axis: matrix_x_axis_full, y_axis: matrix_y_axis_full): void {
-        signalBlock(0, 18, 1, blocks.blockWithData(x_axis, y_axis))
+        signalBlock(0, 18, 1, blocks.blockWithData(blocks.blockById(x_axis), y_axis))
     }
 
     /**
@@ -238,7 +238,7 @@ namespace artemis {
      */
     //% block="aim at $x_axis $y_axis"
     export function aimAtA18(x_axis: matrix_x_axis_full, y_axis: matrix_y_axis_full): void {
-        signalBlock(0, 18, 1, blocks.blockWithData(x_axis, y_axis))
+        signalBlock(0, 18, 1, blocks.blockWithData(blocks.blockById(x_axis), y_axis))
     }
 
 
