@@ -206,7 +206,7 @@ namespace artemis {
      */
     //% block="take picture at $x_axis $y_axis"
     export function takePictureA14(x_axis: matrix_x_axis_full, y_axis: matrix_y_axis_full): void {
-        signalBlock(0, 14, 1, default_signal_block)
+        signalBlock(0, 14, 1, blocks.blockWithData(x_axis, y_axis))
     }
 
     /**
@@ -214,7 +214,7 @@ namespace artemis {
      */
     //% block="set location to $x_axis $y_axis"
     export function setLocationA15(x_axis: matrix_x_axis_full, y_axis: matrix_y_axis_full): void {
-        signalBlock(0, 15, 1, blocks.blockWithData(blocks.blockById(x_axis), y_axis))
+        signalBlock(0, 15, 1, blocks.blockWithData(x_axis, y_axis))
     }
 
     /**
@@ -222,7 +222,7 @@ namespace artemis {
      */
     //% block="mark location to $x_axis $y_axis"
     export function markLocationA17(x_axis: matrix_x_axis_full, y_axis: matrix_y_axis_full): void {
-        signalBlock(0, 17, 1, default_signal_block)
+        signalBlock(0, 17, 1, blocks.blockWithData(x_axis, y_axis))
     }
 
     /**
@@ -230,7 +230,7 @@ namespace artemis {
      */
     //% block="deploy CubeSat to $x_axis $y_axis"
     export function deployCubsatA18(x_axis: matrix_x_axis_full, y_axis: matrix_y_axis_full): void {
-        signalBlock(0, 18, 1, default_signal_block)
+        signalBlock(0, 18, 1, blocks.blockWithData(x_axis, y_axis))
     }
 
     /**
@@ -238,7 +238,7 @@ namespace artemis {
      */
     //% block="aim at $x_axis $y_axis"
     export function aimAtA18(x_axis: matrix_x_axis_full, y_axis: matrix_y_axis_full): void {
-        signalBlock(0, 18, 1, default_signal_block)
+        signalBlock(0, 18, 1, blocks.blockWithData(x_axis, y_axis))
     }
 
 
