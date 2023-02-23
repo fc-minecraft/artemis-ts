@@ -191,7 +191,7 @@ namespace artemis {
     /**
      * Space Junk (Activity 16) ADRV Move
      */
-    //% block="ADRV move %d by %n"
+    //% block="agent move %d by %n"
     export function adrvMoveA16(d: FourDirectionForwardBack, n: number): void {
         agent.move(d, n)
     }
