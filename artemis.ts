@@ -138,6 +138,59 @@ namespace artemis {
         signalBlock(0, 11, 1, default_signal_block)
     }
 
+    /**
+     * Building Blocks (Activity 5)
+     * Player 1
+     */
+    //% block="rover move %d by %n"
+    export function roverMoveA5(d: FourDirectionUpDown, n: number): void {
+        agent.move(d, n)
+    }
+
+    /**
+     * Building Blocks (Activity 5)
+     * Player 1
+     */
+    //% block="collect regolith"
+    export function collectBlockA5(): void {
+        signalBlock(0, 5, 1, default_signal_block)
+    }
+
+    /**
+     * Building Blocks (Activity 5)
+     * Player 2
+     */
+    //% block="melt regolith"
+    export function meltRegolithA5(): void {
+        signalBlock(0, 5, 2, default_signal_block)
+    }
+
+    /**
+     * Building Blocks (Activity 5)
+     * Player 2
+     */
+    //% block="cast block"
+    export function castBlocksA5(): void {
+        signalBlock(1, 5, 2, default_signal_block)
+    }
+
+    /**
+     * Building Blocks (Activity 5)
+     * Player 2
+     */
+    //% block="test block-strength"
+    export function testBlockStrengthA5(): void {
+        signalBlock(2, 5, 2, default_signal_block)
+    }
+
+    /**
+     * Ice Drilling (Activity 6)
+     * Player 1
+     */
+    //% block="rover move %d by %n"
+    export function roverMoveA6(d: FourDirectionUpDown, n: number): void {
+        agent.move(d, n)
+    }
 
     /**
      * Ice Drilling (Activity 6)
