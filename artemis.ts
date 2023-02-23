@@ -10,6 +10,18 @@ enum FourDirectionUpDown {
     Right = SixDirection.Right
 }
 
+//enums
+enum FourDirectionForwardBack {
+    //% block="up"
+    Up = SixDirection.Up,
+    //% block="down"
+    Down = SixDirection.Down,
+    //% block="forward"
+    Forward = SixDirection.Forward,
+    //% block="back"
+    Back = SixDirection.Back
+}
+
 enum extendArm {
     //% block="1"
     a,
@@ -180,7 +192,7 @@ namespace artemis {
      * Space Junk (Activity 16) ADRV Move
      */
     //% block="ADRV move %d by %n"
-    export function adrvMoveA16(d: FourDirectionUpDown, n: number): void {
+    export function adrvMoveA16(d: FourDirectionForwardBack, n: number): void {
         agent.move(d, n)
     }
 
