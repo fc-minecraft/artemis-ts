@@ -138,6 +138,25 @@ namespace artemis {
         signalBlock(0, 11, 1, default_signal_block)
     }
 
+
+    /**
+     * Ice Drilling (Activity 6)
+     * Player 2
+     */
+    //% block="drill down"
+    export function drillDownA6(): void {
+        signalBlock(0, 6, 2, default_signal_block)
+    }
+
+    /**
+     * Ice Drilling (Activity 6)
+     * Player 2
+     */
+    //% block="collect"
+    export function collectSampleA6(): void {
+        signalBlock(1, 6, 2, default_signal_block)
+    }
+
     /**
      * Asteroid Mining (Activity 12)
      */
