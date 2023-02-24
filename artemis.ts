@@ -281,7 +281,7 @@ namespace artemis {
      * Asteroid Mining (Activity 12) Rover Move
      */
     //% block="rover move %d by %n"
-    export function roverMoveA12(d: FourDirectionUpDown, n: number): void {
+    export function roverMoveA12(d: FourDirectionForwardBack, n: number): void {
         agent.move(d, n)
     }
 
