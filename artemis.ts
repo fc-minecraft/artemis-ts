@@ -11,6 +11,18 @@ enum FourDirectionUpDown {
 }
 
 //enums
+enum FourDirectionLeftRightForwardBack {
+    //% block="forward"
+    Forward = SixDirection.Forward,
+    //% block="back"
+    Back = SixDirection.Back,
+    //% block="left"
+    Left = SixDirection.Left,
+    //% block="right"
+    Right = SixDirection.Right
+}
+
+//enums
 enum FourDirectionForwardBack {
     //% block="up"
     Up = SixDirection.Up,
