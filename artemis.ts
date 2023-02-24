@@ -46,6 +46,20 @@ enum FourDirectionForwardBackFake {
     Left = SixDirection.Left
 }
 
+//enums
+// left = up
+// right = down
+enum FourDirectionForwardBackFake2 {
+    //% block="left"
+    Up = SixDirection.Up,
+    //% block="right"
+    Down = SixDirection.Down,
+    //% block="forward"
+    Forward = SixDirection.Forward,
+    //% block="back"
+    Back = SixDirection.Back
+}
+
 enum extendArm {
     //% block="1"
     a,
@@ -247,7 +261,7 @@ namespace artemis {
      * Player 1
      */
     //% block="agent move %d by %n"
-    export function agentMoveA13(d: FourDirectionForwardBack, n: number): void {
+    export function agentMoveA13(d: FourDirectionForwardBackFake2, n: number): void {
         agent.move(d, n)
     }
 
