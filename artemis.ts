@@ -22,6 +22,18 @@ enum FourDirectionForwardBack {
     Back = SixDirection.Back
 }
 
+//enums
+enum FourDirectionForwardBackFake {
+    //% block="up"
+    Up = SixDirection.Up,
+    //% block="down"
+    Down = SixDirection.Down,
+    //% block="forward"
+    Right = SixDirection.Right,
+    //% block="back"
+    Left = SixDirection.Left
+}
+
 enum extendArm {
     //% block="1"
     a,
@@ -281,7 +293,7 @@ namespace artemis {
      * Asteroid Mining (Activity 12) Rover Move
      */
     //% block="rover move %d by %n"
-    export function roverMoveA12(d: FourDirectionForwardBack, n: number): void {
+    export function roverMoveA12(d: FourDirectionForwardBackFake, n: number): void {
         agent.move(d, n)
     }
 
