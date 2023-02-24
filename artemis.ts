@@ -219,6 +219,15 @@ namespace artemis {
     }
 
     /**
+     * Lunar Garden (Activity 13)
+     * Player 1
+     */
+    //% block="agent move %d by %n"
+    export function agentMoveA13(d: FourDirectionForwardBack, n: number): void {
+        agent.move(d, n)
+    }
+
+    /**
      * Lunar Garden 1 (Activity 13)
      */
     //% block="plant seed"
