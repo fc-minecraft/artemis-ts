@@ -243,7 +243,7 @@ namespace artemis {
      * Ice Drilling (Activity 6)
      * Player 2
      */
-    //% block="collect"
+    //% block="collect sample"
     export function collectSampleA6(): void {
         signalBlock(1, 6, 2, default_signal_block)
     }
