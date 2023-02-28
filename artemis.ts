@@ -182,7 +182,7 @@ namespace artemis {
      */
     //% block="rover move %d by %n"
     export function roverMoveA5(d: FourDirectionUpDown, n: number): void {
-        agent.move(d, n)
+        agent.move(d, n*3)
     }
 
     /**
@@ -227,7 +227,7 @@ namespace artemis {
      */
     //% block="rover move %d by %n"
     export function roverMoveA6(d: FourDirectionUpDown, n: number): void {
-        agent.move(d, n)
+        agent.move(d, n*3)
     }
 
     /**
