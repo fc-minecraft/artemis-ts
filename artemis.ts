@@ -37,13 +37,13 @@ enum FourDirectionForwardBack {
 //enums
 enum FourDirectionForwardBackFake {
     //% block="up"
-    Up = SixDirection.Up,
+    ArrowUpOrange = SixDirection.Up,
     //% block="down"
-    Down = SixDirection.Down,
+    ArrowDownMagenta = SixDirection.Down,
     //% block="forward"
-    Right = SixDirection.Right,
+    ArrowRightYellow = SixDirection.Right,
     //% block="back"
-    Left = SixDirection.Left
+    ArrowLeftBlue = SixDirection.Left
 }
 
 //enums
