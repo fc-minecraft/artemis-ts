@@ -30,16 +30,16 @@ enum FourDirectionLeftRightForwardBack {
 enum FourDirectionForwardBack {
     //% blockIdentity="blocks.custom" enumval=990 block="Arrow Up Orange"
     //% jres alias=ARROW_UP_ORANGE
-    Up = SixDirection.Up,
+    ArrowUpOrange = SixDirection.Up,
     //% blockIdentity="blocks.custom" enumval=989 block="Arrow Down Magenta"
     //% jres alias=ARROW_DOWN_MAGENTA
-    Down = SixDirection.Down,
+    ArrowDownMagenta = SixDirection.Down,
     //% blockIdentity="blocks.custom" enumval=988 block="Arrow Right Yellow"
     //% jres alias=ARROW_RIGHT_YELLOW
-    Forward = SixDirection.Forward,
+    ArrowRightYellow = SixDirection.Forward,
     //% blockIdentity="blocks.custom" enumval=987 block="Arrow Left Blue"
     //% jres alias=ARROW_LEFT_BLUE
-    Back = SixDirection.Back
+    ArrowLeftBlue = SixDirection.Back
 }
 
 //enums
@@ -64,16 +64,16 @@ enum FourDirectionForwardBackFake {
 enum FourDirectionForwardBackFake2 {
     //% blockIdentity="blocks.custom" enumval=998 block="Arrow Up Orange"
     //% jres alias=ARROW_UP_ORANGE
-    Up = SixDirection.Up,
+    ArrowUpOrange = SixDirection.Up,
     //% blockIdentity="blocks.custom" enumval=997 block="Arrow Down Magenta"
     //% jres alias=ARROW_DOWN_MAGENTA
-    Down = SixDirection.Down,
+    ArrowDownMagenta = SixDirection.Down,
     //% blockIdentity="blocks.custom" enumval=995 block="Arrow Right Yellow"
     //% jres alias=ARROW_RIGHT_YELLOW
-    Forward = SixDirection.Forward,
+    ArrowRightYellow = SixDirection.Forward,
     //% blockIdentity="blocks.custom" enumval=996 block="Arrow Left Blue"
     //% jres alias=ARROW_LEFT_BLUE
-    Back = SixDirection.Back
+    ArrowLeftBlue = SixDirection.Back
 }
 
 enum extendArm {
