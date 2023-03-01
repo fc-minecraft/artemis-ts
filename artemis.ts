@@ -166,7 +166,7 @@ namespace artemis {
      * Building Blocks (Activity 5)
      * Player 2
      */
-    //% block="melt regolith"
+    //% block="`Generics.meltRegolith` melt regolith"
     export function meltRegolithA5(): void {
         signalBlock(0, 5, 2, default_signal_block)
     }
@@ -175,7 +175,7 @@ namespace artemis {
      * Building Blocks (Activity 5)
      * Player 2
      */
-    //% block="cast block"
+    //% block="`Generics.castRegolith` cast block"
     export function castBlocksA5(): void {
         signalBlock(1, 5, 2, default_signal_block)
     }
@@ -184,7 +184,7 @@ namespace artemis {
      * Building Blocks (Activity 5)
      * Player 2
      */
-    //% block="test block-strength"
+    //% block="`Generics.testBlockStrength` test block-strength"
     export function testBlockStrengthA5(): void {
         signalBlock(2, 5, 2, default_signal_block)
     }
@@ -241,7 +241,7 @@ namespace artemis {
      * Lunar Garden (Activity 13)
      * Player 1
      */
-    //% block="agent move %d by %n"
+    //% block="`Generics.agentMove` agent move %d by %n"
     export function agentMoveA13(d: FourDirectionArrows, n: number): void {
         switch (d) {
             case FourDirectionArrows.ArrowUpOrange:
@@ -270,7 +270,7 @@ namespace artemis {
     /**
      * Agent Move Footsize 1
      */
-    //% block="agent move %d by %n"
+    //% block="`Generics.agentMove` agent move %d by %n"
     export function agentMoveFoot1(d: FourDirectionArrows, n: number): void {
         switch (d) {
             case FourDirectionArrows.ArrowUpOrange:
@@ -291,7 +291,7 @@ namespace artemis {
     /**
      * Agent Move Footsize 3
      */
-    //% block="agent move %d by %n"
+    //% block="`Generics.agentMove` agent move %d by %n"
     export function agentMoveFoot3(d: FourDirectionArrows, n: number): void {
         switch (d) {
             case FourDirectionArrows.ArrowUpOrange:
@@ -313,7 +313,7 @@ namespace artemis {
     /**
      * Space Junk (Activity 16) ADRV Move
      */
-    //% block="agent move %d by %n"
+    //% block="`Generics.agentMove` agent move %d by %n"
     export function adrvMoveA16(d: FourDirectionArrows, n: number): void {
         switch (d) {
             case FourDirectionArrows.ArrowUpOrange:
