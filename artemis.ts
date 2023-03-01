@@ -15,15 +15,19 @@ enum FourDirectionUpDown {
 }
 
 //enums
-enum FourDirectionLeftRightForwardBack {
-    //% block="forward"
-    Forward = SixDirection.Forward,
-    //% block="back"
-    Back = SixDirection.Back,
-    //% block="left"
-    Left = SixDirection.Left,
-    //% block="right"
-    Right = SixDirection.Right
+enum FourDirectionArrows {
+    //% blockIdentity="blocks.custom" enumval=986 block="Arrow Up Orange"
+    //% jres alias=ARROW_UP_ORANGE
+    ArrowUpOrange = 986,
+    //% blockIdentity="blocks.custom" enumval=985 block="Arrow Down Magenta"
+    //% jres alias=ARROW_DOWN_MAGENTA
+    ArrowDownMagenta = 985,
+    //% blockIdentity="blocks.custom" enumval=984 block="Arrow Right Yellow"
+    //% jres alias=ARROW_RIGHT_YELLOW
+    ArrowRightYellow = 984,
+    //% blockIdentity="blocks.custom" enumval=983 block="Arrow Left Blue"
+    //% jres alias=ARROW_LEFT_BLUE
+    ArrowLeftBlue = 983
 }
 
 //enums
@@ -197,8 +201,21 @@ namespace artemis {
      * Player 1
      */
     //% block="rover `Generics.roverMove` move %d by %n"
-    export function roverMoveA5(d: FourDirectionUpDown, n: number): void {
-        agent.move(d, n*3)
+    export function roverMoveA5(d: FourDirectionArrows, n: number): void {
+        switch (d) {
+            case FourDirectionArrows.ArrowUpOrange:
+                agent.move(SixDirection.Up, n * 3)
+                break;
+            case FourDirectionArrows.ArrowDownMagenta:
+                agent.move(SixDirection.Down, n * 3)
+                break;
+            case FourDirectionArrows.ArrowLeftBlue:
+                agent.move(SixDirection.Right, n * 3)
+                break;
+            case FourDirectionArrows.ArrowRightYellow:
+                agent.move(SixDirection.Left, n * 3)
+                break;
+        }
     }
 
     /**
@@ -242,8 +259,21 @@ namespace artemis {
      * Player 1
      */
     //% block="rover `Generics.roverMove` move %d by %n"
-    export function roverMoveA6(d: FourDirectionUpDown, n: number): void {
-        agent.move(d, n*3)
+    export function roverMoveA6(d: FourDirectionArrows, n: number): void {
+        switch (d) {
+            case FourDirectionArrows.ArrowUpOrange:
+                agent.move(SixDirection.Up, n * 3)
+                break;
+            case FourDirectionArrows.ArrowDownMagenta:
+                agent.move(SixDirection.Down, n * 3)
+                break;
+            case FourDirectionArrows.ArrowLeftBlue:
+                agent.move(SixDirection.Right, n * 3)
+                break;
+            case FourDirectionArrows.ArrowRightYellow:
+                agent.move(SixDirection.Left, n * 3)
+                break;
+        }
     }
 
     /**
@@ -277,8 +307,21 @@ namespace artemis {
      * Player 1
      */
     //% block="agent move %d by %n"
-    export function agentMoveA13(d: FourDirectionForwardBackFake2, n: number): void {
-        agent.move(d, n)
+    export function agentMoveA13(d: FourDirectionArrows, n: number): void {
+        switch (d) {
+            case FourDirectionArrows.ArrowUpOrange:
+                agent.move(SixDirection.Up, n)
+                break;
+            case FourDirectionArrows.ArrowDownMagenta:
+                agent.move(SixDirection.Down, n)
+                break;
+            case FourDirectionArrows.ArrowLeftBlue:
+                agent.move(SixDirection.Forward, n)
+                break;
+            case FourDirectionArrows.ArrowRightYellow:
+                agent.move(SixDirection.Back, n)
+                break;
+        }
     }
 
     /**
@@ -293,16 +336,42 @@ namespace artemis {
      * Agent Move Footsize 1
      */
     //% block="agent move %d by %n"
-    export function agentMoveFoot1(d: FourDirectionUpDown, n: number): void {
-        agent.move(d, n)
+    export function agentMoveFoot1(d: FourDirectionArrows, n: number): void {
+        switch (d) {
+            case FourDirectionArrows.ArrowUpOrange:
+                agent.move(SixDirection.Up, n)
+                break;
+            case FourDirectionArrows.ArrowDownMagenta:
+                agent.move(SixDirection.Down, n)
+                break;
+            case FourDirectionArrows.ArrowLeftBlue:
+                agent.move(SixDirection.Right, n)
+                break;
+            case FourDirectionArrows.ArrowRightYellow:
+                agent.move(SixDirection.Left, n)
+                break;
+        }
     }
 
     /**
      * Agent Move Footsize 3
      */
     //% block="agent move %d by %n"
-    export function agentMoveFoot3(d: FourDirectionUpDown, n: number): void {
-        agent.move(d, n * 3)
+    export function agentMoveFoot3(d: FourDirectionArrows, n: number): void {
+        switch (d) {
+            case FourDirectionArrows.ArrowUpOrange:
+                agent.move(SixDirection.Up, n*3)
+                break;
+            case FourDirectionArrows.ArrowDownMagenta:
+                agent.move(SixDirection.Down, n * 3)
+                break;
+            case FourDirectionArrows.ArrowLeftBlue:
+                agent.move(SixDirection.Right, n * 3)
+                break;
+            case FourDirectionArrows.ArrowRightYellow:
+                agent.move(SixDirection.Left, n * 3)
+                break;
+        }
 
     }
 
@@ -310,16 +379,42 @@ namespace artemis {
      * Space Junk (Activity 16) ADRV Move
      */
     //% block="agent move %d by %n"
-    export function adrvMoveA16(d: FourDirectionForwardBack, n: number): void {
-        agent.move(d, n)
+    export function adrvMoveA16(d: FourDirectionArrows, n: number): void {
+        switch (d) {
+            case FourDirectionArrows.ArrowUpOrange:
+                agent.move(SixDirection.Up, n)
+                break;
+            case FourDirectionArrows.ArrowDownMagenta:
+                agent.move(SixDirection.Down, n)
+                break;
+            case FourDirectionArrows.ArrowLeftBlue:
+                agent.move(SixDirection.Forward, n)
+                break;
+            case FourDirectionArrows.ArrowRightYellow:
+                agent.move(SixDirection.Back, n)
+                break;
+        }
     }
 
     /**
      * Asteroid Mining (Activity 12) Rover Move
      */
     //% block="rover `Generics.roverMove` move %d by %n"
-    export function roverMoveA12(d: FourDirectionForwardBackFake, n: number): void {
-        agent.move(d, n)
+    export function roverMoveA12(d: FourDirectionArrows, n: number): void {
+        switch (d) {
+            case FourDirectionArrows.ArrowUpOrange:
+                agent.move(SixDirection.Up, n)
+                break;
+            case FourDirectionArrows.ArrowDownMagenta:
+                agent.move(SixDirection.Down, n)
+                break;
+            case FourDirectionArrows.ArrowLeftBlue:
+                agent.move(SixDirection.Right, n)
+                break;
+            case FourDirectionArrows.ArrowRightYellow:
+                agent.move(SixDirection.Left, n)
+                break;
+        }
     }
 
 
@@ -327,8 +422,21 @@ namespace artemis {
      * Mars Recon (Activity 11) Rover Move
      */
     //% block="Ingenuity `Generics.ingenuityMove` move %d by %n"
-    export function roverMoveA11(d: FourDirectionUpDown, n: number): void {
-        agent.move(d, n*3)
+    export function roverMoveA11(d: FourDirectionArrows, n: number): void {
+        switch (d) {
+            case FourDirectionArrows.ArrowUpOrange:
+                agent.move(SixDirection.Up, n * 3)
+                break;
+            case FourDirectionArrows.ArrowDownMagenta:
+                agent.move(SixDirection.Down, n * 3)
+                break;
+            case FourDirectionArrows.ArrowLeftBlue:
+                agent.move(SixDirection.Right, n * 3)
+                break;
+            case FourDirectionArrows.ArrowRightYellow:
+                agent.move(SixDirection.Left, n * 3)
+                break;
+        }
     }
 
     /**
