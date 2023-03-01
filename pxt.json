@@ -9,7 +9,8 @@
     "files": [
         "README.md",
         "artemis.ts",
-        "tutorial-info-cache.json"
+        "tutorial-info-cache.json",
+        "generics.jres"
     ],
     "testFiles": [],
     "targetVersions": {

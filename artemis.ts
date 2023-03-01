@@ -131,7 +131,7 @@ namespace artemis {
     /**
      * Start Game Player 1
      */
-    //% block="go for launch"
+    //% block="go for launch `Generics.blastOff`"
     export function startGameP1(): void {
         signalBlock(0, 0, 1, default_signal_block)
     }
