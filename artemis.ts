@@ -1,20 +1,5 @@
 //enums
-enum FourDirectionUpDown {
-    //% blockIdentity="blocks.custom" enumval=994 block="Arrow Up Orange"
-    //% jres alias=ARROW_UP_ORANGE
-    ArrowUpOrange = SixDirection.Up,
-    //% blockIdentity="blocks.custom" enumval=993 block="Arrow Down Magenta"
-    //% jres alias=ARROW_DOWN_MAGENTA
-    ArrowDownMagenta = SixDirection.Down,
-    //% blockIdentity="blocks.custom" enumval=992 block="Arrow Right Yellow"
-    //% jres alias=ARROW_RIGHT_YELLOW
-    ArrowRightYellow = SixDirection.Right,
-    //% blockIdentity="blocks.custom" enumval=991 block="Arrow Left Blue"
-    //% jres alias=ARROW_LEFT_BLUE
-    ArrowLeftBlue = SixDirection.Left
-}
 
-//enums
 enum FourDirectionArrows {
     //% blockIdentity="blocks.custom" enumval=986 block="Arrow Up Orange"
     //% jres alias=ARROW_UP_ORANGE
@@ -28,56 +13,6 @@ enum FourDirectionArrows {
     //% blockIdentity="blocks.custom" enumval=983 block="Arrow Left Blue"
     //% jres alias=ARROW_LEFT_BLUE
     ArrowLeftBlue = 983
-}
-
-//enums
-enum FourDirectionForwardBack {
-    //% blockIdentity="blocks.custom" enumval=990 block="Arrow Up Orange"
-    //% jres alias=ARROW_UP_ORANGE
-    ArrowUpOrange = SixDirection.Up,
-    //% blockIdentity="blocks.custom" enumval=989 block="Arrow Down Magenta"
-    //% jres alias=ARROW_DOWN_MAGENTA
-    ArrowDownMagenta = SixDirection.Down,
-    //% blockIdentity="blocks.custom" enumval=988 block="Arrow Right Yellow"
-    //% jres alias=ARROW_RIGHT_YELLOW
-    ArrowRightYellow = SixDirection.Forward,
-    //% blockIdentity="blocks.custom" enumval=987 block="Arrow Left Blue"
-    //% jres alias=ARROW_LEFT_BLUE
-    ArrowLeftBlue = SixDirection.Back
-}
-
-//enums
-enum FourDirectionForwardBackFake {
-    //% blockIdentity="blocks.custom" enumval=998 block="Arrow Up Orange"
-    //% jres alias=ARROW_UP_ORANGE
-    ArrowUpOrange = SixDirection.Up,
-    //% blockIdentity="blocks.custom" enumval=997 block="Arrow Down Magenta"
-    //% jres alias=ARROW_DOWN_MAGENTA
-    ArrowDownMagenta = SixDirection.Down,
-    //% blockIdentity="blocks.custom" enumval=995 block="Arrow Right Yellow"
-    //% jres alias=ARROW_RIGHT_YELLOW
-    ArrowRightYellow = SixDirection.Right,
-    //% blockIdentity="blocks.custom" enumval=996 block="Arrow Left Blue"
-    //% jres alias=ARROW_LEFT_BLUE
-    ArrowLeftBlue = SixDirection.Left
-}
-
-//enums
-// left = up
-// right = down
-enum FourDirectionForwardBackFake2 {
-    //% blockIdentity="blocks.custom" enumval=998 block="Arrow Up Orange"
-    //% jres alias=ARROW_UP_ORANGE
-    ArrowUpOrange = SixDirection.Up,
-    //% blockIdentity="blocks.custom" enumval=997 block="Arrow Down Magenta"
-    //% jres alias=ARROW_DOWN_MAGENTA
-    ArrowDownMagenta = SixDirection.Down,
-    //% blockIdentity="blocks.custom" enumval=995 block="Arrow Right Yellow"
-    //% jres alias=ARROW_RIGHT_YELLOW
-    ArrowRightYellow = SixDirection.Forward,
-    //% blockIdentity="blocks.custom" enumval=996 block="Arrow Left Blue"
-    //% jres alias=ARROW_LEFT_BLUE
-    ArrowLeftBlue = SixDirection.Back
 }
 
 enum extendArm {
@@ -209,10 +144,10 @@ namespace artemis {
             case FourDirectionArrows.ArrowDownMagenta:
                 agent.move(SixDirection.Down, n * 3)
                 break;
-            case FourDirectionArrows.ArrowLeftBlue:
+            case FourDirectionArrows.ArrowRightYellow:
                 agent.move(SixDirection.Right, n * 3)
                 break;
-            case FourDirectionArrows.ArrowRightYellow:
+            case FourDirectionArrows.ArrowLeftBlue:
                 agent.move(SixDirection.Left, n * 3)
                 break;
         }
@@ -267,10 +202,10 @@ namespace artemis {
             case FourDirectionArrows.ArrowDownMagenta:
                 agent.move(SixDirection.Down, n * 3)
                 break;
-            case FourDirectionArrows.ArrowLeftBlue:
+            case FourDirectionArrows.ArrowRightYellow:
                 agent.move(SixDirection.Right, n * 3)
                 break;
-            case FourDirectionArrows.ArrowRightYellow:
+            case FourDirectionArrows.ArrowLeftBlue:
                 agent.move(SixDirection.Left, n * 3)
                 break;
         }
@@ -315,10 +250,10 @@ namespace artemis {
             case FourDirectionArrows.ArrowDownMagenta:
                 agent.move(SixDirection.Down, n)
                 break;
-            case FourDirectionArrows.ArrowLeftBlue:
+            case FourDirectionArrows.ArrowRightYellow:
                 agent.move(SixDirection.Forward, n)
                 break;
-            case FourDirectionArrows.ArrowRightYellow:
+            case FourDirectionArrows.ArrowLeftBlue:
                 agent.move(SixDirection.Back, n)
                 break;
         }
@@ -344,10 +279,10 @@ namespace artemis {
             case FourDirectionArrows.ArrowDownMagenta:
                 agent.move(SixDirection.Down, n)
                 break;
-            case FourDirectionArrows.ArrowLeftBlue:
+            case FourDirectionArrows.ArrowRightYellow:
                 agent.move(SixDirection.Right, n)
                 break;
-            case FourDirectionArrows.ArrowRightYellow:
+            case FourDirectionArrows.ArrowLeftBlue:
                 agent.move(SixDirection.Left, n)
                 break;
         }
@@ -365,10 +300,10 @@ namespace artemis {
             case FourDirectionArrows.ArrowDownMagenta:
                 agent.move(SixDirection.Down, n * 3)
                 break;
-            case FourDirectionArrows.ArrowLeftBlue:
+            case FourDirectionArrows.ArrowRightYellow:
                 agent.move(SixDirection.Right, n * 3)
                 break;
-            case FourDirectionArrows.ArrowRightYellow:
+            case FourDirectionArrows.ArrowLeftBlue:
                 agent.move(SixDirection.Left, n * 3)
                 break;
         }
@@ -387,10 +322,10 @@ namespace artemis {
             case FourDirectionArrows.ArrowDownMagenta:
                 agent.move(SixDirection.Down, n)
                 break;
-            case FourDirectionArrows.ArrowLeftBlue:
+            case FourDirectionArrows.ArrowRightYellow:
                 agent.move(SixDirection.Forward, n)
                 break;
-            case FourDirectionArrows.ArrowRightYellow:
+            case FourDirectionArrows.ArrowLeftBlue:
                 agent.move(SixDirection.Back, n)
                 break;
         }
@@ -408,10 +343,10 @@ namespace artemis {
             case FourDirectionArrows.ArrowDownMagenta:
                 agent.move(SixDirection.Down, n)
                 break;
-            case FourDirectionArrows.ArrowLeftBlue:
+            case FourDirectionArrows.ArrowRightYellow:
                 agent.move(SixDirection.Right, n)
                 break;
-            case FourDirectionArrows.ArrowRightYellow:
+            case FourDirectionArrows.ArrowLeftBlue:
                 agent.move(SixDirection.Left, n)
                 break;
         }
@@ -430,10 +365,10 @@ namespace artemis {
             case FourDirectionArrows.ArrowDownMagenta:
                 agent.move(SixDirection.Down, n * 3)
                 break;
-            case FourDirectionArrows.ArrowLeftBlue:
+            case FourDirectionArrows.ArrowRightYellow:
                 agent.move(SixDirection.Right, n * 3)
                 break;
-            case FourDirectionArrows.ArrowRightYellow:
+            case FourDirectionArrows.ArrowLeftBlue:
                 agent.move(SixDirection.Left, n * 3)
                 break;
         }
