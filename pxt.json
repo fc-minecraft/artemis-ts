@@ -10,7 +10,8 @@
         "README.md",
         "artemis.ts",
         "tutorial-info-cache.json",
-        "generics.jres"
+        "generics.jres",
+        "FourDirectionForwardBackFake.jres"
     ],
     "testFiles": [],
     "targetVersions": {
