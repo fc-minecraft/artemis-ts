@@ -1,6 +1,6 @@
 {
     "*": {
-        "namespace": "FourDirectionForwardBackFake",
+        "namespace": "FourDirectionUpDown",
         "dataEncoding": "base64"
     },
     "ArrowDownMagenta": {

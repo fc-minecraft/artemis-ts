@@ -12,7 +12,8 @@
         "tutorial-info-cache.json",
         "generics.jres",
         "FourDirectionForwardBackFake.jres",
-        "FourDirectionForwardBackFake2.jres"
+        "FourDirectionForwardBackFake2.jres",
+        "FourDirectionUpDown.jres"
     ],
     "testFiles": [],
     "targetVersions": {

@@ -1,13 +1,13 @@
 //enums
 enum FourDirectionUpDown {
     //% block="up"
-    Up = SixDirection.Up,
+    ArrowUpOrange = SixDirection.Up,
     //% block="down"
-    Down = SixDirection.Down,
-    //% block="left"
-    Left = SixDirection.Left,
+    ArrowDownMagenta = SixDirection.Down,
     //% block="right"
-    Right = SixDirection.Right
+    ArrowRightYellow = SixDirection.Right,
+    //% block="left"
+    ArrowLeftBlue = SixDirection.Left
 }
 
 //enums
@@ -55,13 +55,13 @@ enum FourDirectionForwardBackFake {
 // right = down
 enum FourDirectionForwardBackFake2 {
     //% block="left"
-    ArrowUpOrange = SixDirection.Up,
+    Up = SixDirection.Up,
     //% block="right"
-    ArrowDownMagenta = SixDirection.Down,
+    Down = SixDirection.Down,
     //% block="forward"
-    ArrowRightYellow = SixDirection.Forward,
+    Forward = SixDirection.Forward,
     //% block="back"
-    ArrowLeftBlue = SixDirection.Back
+    Back = SixDirection.Back
 }
 
 enum extendArm {
