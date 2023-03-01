@@ -1,15 +1,15 @@
 //enums
 enum FourDirectionUpDown {
-    //% blockIdentity="blocks.custom" enumval=998 block="Arrow Up Orange"
+    //% blockIdentity="blocks.custom" enumval=994 block="Arrow Up Orange"
     //% jres alias=ARROW_UP_ORANGE
     ArrowUpOrange = SixDirection.Up,
-    //% blockIdentity="blocks.custom" enumval=997 block="Arrow Down Magenta"
+    //% blockIdentity="blocks.custom" enumval=993 block="Arrow Down Magenta"
     //% jres alias=ARROW_DOWN_MAGENTA
     ArrowDownMagenta = SixDirection.Down,
-    //% blockIdentity="blocks.custom" enumval=995 block="Arrow Right Yellow"
+    //% blockIdentity="blocks.custom" enumval=992 block="Arrow Right Yellow"
     //% jres alias=ARROW_RIGHT_YELLOW
     ArrowRightYellow = SixDirection.Right,
-    //% blockIdentity="blocks.custom" enumval=996 block="Arrow Left Blue"
+    //% blockIdentity="blocks.custom" enumval=991 block="Arrow Left Blue"
     //% jres alias=ARROW_LEFT_BLUE
     ArrowLeftBlue = SixDirection.Left
 }
@@ -28,13 +28,17 @@ enum FourDirectionLeftRightForwardBack {
 
 //enums
 enum FourDirectionForwardBack {
-    //% block="up"
+    //% blockIdentity="blocks.custom" enumval=990 block="Arrow Up Orange"
+    //% jres alias=ARROW_UP_ORANGE
     Up = SixDirection.Up,
-    //% block="down"
+    //% blockIdentity="blocks.custom" enumval=989 block="Arrow Down Magenta"
+    //% jres alias=ARROW_DOWN_MAGENTA
     Down = SixDirection.Down,
-    //% block="forward"
+    //% blockIdentity="blocks.custom" enumval=988 block="Arrow Right Yellow"
+    //% jres alias=ARROW_RIGHT_YELLOW
     Forward = SixDirection.Forward,
-    //% block="back"
+    //% blockIdentity="blocks.custom" enumval=987 block="Arrow Left Blue"
+    //% jres alias=ARROW_LEFT_BLUE
     Back = SixDirection.Back
 }
 
@@ -58,13 +62,17 @@ enum FourDirectionForwardBackFake {
 // left = up
 // right = down
 enum FourDirectionForwardBackFake2 {
-    //% block="left"
+    //% blockIdentity="blocks.custom" enumval=998 block="Arrow Up Orange"
+    //% jres alias=ARROW_UP_ORANGE
     Up = SixDirection.Up,
-    //% block="right"
+    //% blockIdentity="blocks.custom" enumval=997 block="Arrow Down Magenta"
+    //% jres alias=ARROW_DOWN_MAGENTA
     Down = SixDirection.Down,
-    //% block="forward"
+    //% blockIdentity="blocks.custom" enumval=995 block="Arrow Right Yellow"
+    //% jres alias=ARROW_RIGHT_YELLOW
     Forward = SixDirection.Forward,
-    //% block="back"
+    //% blockIdentity="blocks.custom" enumval=996 block="Arrow Left Blue"
+    //% jres alias=ARROW_LEFT_BLUE
     Back = SixDirection.Back
 }
 
