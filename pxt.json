@@ -13,7 +13,8 @@
         "generics.jres",
         "FourDirectionForwardBackFake.jres",
         "FourDirectionForwardBackFake2.jres",
-        "FourDirectionUpDown.jres"
+        "FourDirectionUpDown.jres",
+        "FourDirectionArrows.jres"
     ],
     "testFiles": [],
     "targetVersions": {
