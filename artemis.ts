@@ -151,7 +151,7 @@ namespace artemis {
     /**
      * Start Game Player 1
      */
-    //% block="go for launch `Generics.blastOff`"
+    //% block="`Generics.blastOff` go for launch"
     export function startGameP1(): void {
         signalBlock(0, 0, 1, default_signal_block)
     }
@@ -159,7 +159,7 @@ namespace artemis {
     /**
      * Start Game Player 2
      */
-    //% block="go for launch `Generics.blastOff`"
+    //% block="`Generics.blastOff` go for launch"
     export function startGameP2(): void {
         signalBlock(0, 0, 2, default_signal_block)
     }
@@ -167,7 +167,7 @@ namespace artemis {
     /**
      * Start Game Player 3
      */
-    //% block="go for launch `Generics.blastOff`"
+    //% block="`Generics.blastOff` go for launch"
     export function startGameP3(): void {
         signalBlock(0, 0, 3, default_signal_block)
     }
@@ -175,7 +175,7 @@ namespace artemis {
     /**
      * Start Game Player 4
      */
-    //% block="go for launch `Generics.blastOff`"
+    //% block="`Generics.blastOff` go for launch"
     export function startGameP4(): void {
         signalBlock(0, 0, 4, default_signal_block)
     }
@@ -183,7 +183,7 @@ namespace artemis {
     /**
      * Space Junk (Activity 16) Collect Debris
      */
-    //% block="collect debris `Generics.collectDebris`"
+    //% block="`Generics.collectDebris` collect debris"
     export function collectDebrisA16(): void {
         signalBlock(0, 16, 1, default_signal_block)
     }
@@ -191,7 +191,7 @@ namespace artemis {
     /**
      * Mars Recon (Activity 11)
      */
-    //% block="take picture `Generics.takePicture`"
+    //% block="`Generics.takePicture` take picture"
     export function takePictureA11(): void {
         signalBlock(0, 11, 1, default_signal_block)
     }
@@ -200,7 +200,7 @@ namespace artemis {
      * Building Blocks (Activity 5)
      * Player 1
      */
-    //% block="rover `Generics.roverMove` move %d by %n"
+    //% block="`Generics.roverMove` rover move %d by %n"
     export function roverMoveA5(d: FourDirectionArrows, n: number): void {
         switch (d) {
             case FourDirectionArrows.ArrowUpOrange:
@@ -222,7 +222,7 @@ namespace artemis {
      * Building Blocks (Activity 5)
      * Player 1
      */
-    //% block="collect regolith `Generics.collectRegolith`"
+    //% block="`Generics.collectRegolith` collect regolith"
     export function collectBlockA5(): void {
         signalBlock(0, 5, 1, default_signal_block)
     }
@@ -258,7 +258,7 @@ namespace artemis {
      * Ice Drilling (Activity 6)
      * Player 1
      */
-    //% block="rover `Generics.roverMove` move %d by %n"
+    //% block="`Generics.roverMove` rover move %d by %n"
     export function roverMoveA6(d: FourDirectionArrows, n: number): void {
         switch (d) {
             case FourDirectionArrows.ArrowUpOrange:
@@ -280,7 +280,7 @@ namespace artemis {
      * Ice Drilling (Activity 6)
      * Player 2
      */
-    //% block="drill down `Generics.drillDown`"
+    //% block="`Generics.drillDown` drill down"
     export function drillDownA6(): void {
         signalBlock(0, 6, 2, default_signal_block)
     }
@@ -289,7 +289,7 @@ namespace artemis {
      * Ice Drilling (Activity 6)
      * Player 2
      */
-    //% block="collect sample `Generics.collectSample`"
+    //% block="`Generics.collectSample` collect sample"
     export function collectSampleA6(): void {
         signalBlock(1, 6, 2, default_signal_block)
     }
@@ -297,7 +297,7 @@ namespace artemis {
     /**
      * Asteroid Mining (Activity 12)
      */
-    //% block="mine asteroid `Generics.mineBlock`"
+    //% block="`Generics.mineBlock` mine asteroid"
     export function mineAsteroidA12(): void {
         signalBlock(0, 12, 1, default_signal_block)
     }
@@ -327,7 +327,7 @@ namespace artemis {
     /**
      * Lunar Garden 1 (Activity 13)
      */
-    //% block="plant seed `Generics.plantSeed`"
+    //% block="`Generics.plantSeed` plant seed"
     export function lunarGarden1A13(): void {
         signalBlock(0, 13, 1, default_signal_block)
     }
@@ -399,7 +399,7 @@ namespace artemis {
     /**
      * Asteroid Mining (Activity 12) Rover Move
      */
-    //% block="rover `Generics.roverMove` move %d by %n"
+    //% block="`Generics.roverMove` rover move %d by %n"
     export function roverMoveA12(d: FourDirectionArrows, n: number): void {
         switch (d) {
             case FourDirectionArrows.ArrowUpOrange:
@@ -421,7 +421,7 @@ namespace artemis {
     /**
      * Mars Recon (Activity 11) Rover Move
      */
-    //% block="Ingenuity `Generics.ingenuityMove` move %d by %n"
+    //% block="`Generics.ingenuityMove` Ingenuity move %d by %n"
     export function roverMoveA11(d: FourDirectionArrows, n: number): void {
         switch (d) {
             case FourDirectionArrows.ArrowUpOrange:
@@ -442,7 +442,7 @@ namespace artemis {
     /**
      * Aurora Pictures (Activity 14)
      */
-    //% block="take picture `Generics.takePicture` $x_axis $y_axis"
+    //% block="`Generics.takePicture` take picture $x_axis $y_axis"
     export function takePictureA14(x_axis: matrix_x_axis_full, y_axis: matrix_y_axis_full): void {
         signalBlock(0, 14, 1, blocks.blockWithData(blocks.blockById(x_axis), y_axis))
     }
@@ -450,7 +450,7 @@ namespace artemis {
     /**
      * Orion Splashdown (Activity 15)
      */
-    //% block="set location `Generics.markLocation` $x_axis $y_axis"
+    //% block="`Generics.markLocation` set location $x_axis $y_axis"
     export function setLocationA15(x_axis: matrix_x_axis_full, y_axis: matrix_y_axis_full): void {
         signalBlock(0, 15, 1, blocks.blockWithData(blocks.blockById(x_axis), y_axis))
     }
@@ -458,7 +458,7 @@ namespace artemis {
     /**
      * Landing Site (Activity 17)
      */
-    //% block="mark location `Generics.markLocation` $x_axis $y_axis"
+    //% block="`Generics.markLocation` mark location $x_axis $y_axis"
     export function markLocationA17(x_axis: matrix_x_axis_full, y_axis: matrix_y_axis_full): void {
         signalBlock(0, 17, 1, blocks.blockWithData(blocks.blockById(x_axis), y_axis))
     }
@@ -466,7 +466,7 @@ namespace artemis {
     /**
      * Earth's Pollution (Activity 18)
      */
-    //% block="deploy CubeSat `Generics.deployCubesat` $x_axis $y_axis"
+    //% block="`Generics.deployCubesat` deploy CubeSat $x_axis $y_axis"
     export function deployCubsatA18(x_axis: matrix_x_axis_full, y_axis: matrix_y_axis_full): void {
         signalBlock(0, 18, 1, blocks.blockWithData(blocks.blockById(x_axis), y_axis))
     }
