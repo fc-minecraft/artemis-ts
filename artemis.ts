@@ -36,13 +36,17 @@ enum FourDirectionForwardBack {
 
 //enums
 enum FourDirectionForwardBackFake {
-    //% block="up"
+    //% blockIdentity="blocks.custom" enumval=998 block="Arrow Up Orange"
+    //% jres alias=ARROW_UP_ORANGE
     ArrowUpOrange = SixDirection.Up,
-    //% block="down"
+    //% blockIdentity="blocks.custom" enumval=997 block="Arrow Down Magenta"
+    //% jres alias=ARROW_DOWN_MAGENTA
     ArrowDownMagenta = SixDirection.Down,
-    //% block="forward"
+    //% blockIdentity="blocks.custom" enumval=995 block="Arrow Right Yellow"
+    //% jres alias=ARROW_RIGHT_YELLOW
     ArrowRightYellow = SixDirection.Right,
-    //% block="back"
+    //% blockIdentity="blocks.custom" enumval=996 block="Arrow Left Blue"
+    //% jres alias=ARROW_LEFT_BLUE
     ArrowLeftBlue = SixDirection.Left
 }
 
