@@ -11,7 +11,8 @@
         "artemis.ts",
         "tutorial-info-cache.json",
         "generics.jres",
-        "FourDirectionForwardBackFake.jres"
+        "FourDirectionForwardBackFake.jres",
+        "FourDirectionForwardBackFake2.jres"
     ],
     "testFiles": [],
     "targetVersions": {
