@@ -61,7 +61,7 @@ enum CrewMealAddIngredients {
     //% blockIdentity="blocks.custom" enumval=2 block="Add Pepperoni"
     //% jres alias=ADD_PEPPERONI
     AddPepperoni = 2,
-    //% blockIdentity="blocks.custom" enumval=2 block="Add Tomato"
+    //% blockIdentity="blocks.custom" enumval=3 block="Add Tomato"
     //% jres alias=ADD_TOMATO
     AddTomato = 3
 }
@@ -79,6 +79,38 @@ enum RehydrationOptions {
     //% blockIdentity="blocks.custom" enumval=0 block="100 ml"
     //% jres alias=100_ML
     A100Ml = 0
+}
+
+enum Clockwise {
+    //% block="clockwise"
+    Clockwise,
+    //% block="counterclockwise"
+    Counterclockwise
+}
+
+enum MoveDirection {
+    //% block="toward"
+    Toward,
+    //% block="away"
+    Away
+}
+
+enum RotationAmount {
+    //% block="90°"
+    a = 0,
+    //% block="180°"
+    b = 1,
+    //% block="360°"
+    c = 2
+}
+
+enum RotationType {
+    //% block="pitch"
+    Pitch,
+    //% block="yaw"
+    Yaw,
+    //% block="roll"
+    Roll
 }
 
 enum onOffToggle {
@@ -186,6 +218,90 @@ namespace artemis {
     export function collectDebrisA16(): void {
         signalBlock(0, 16, 1, default_signal_block)
     }
+
+    /**
+     * Prox Ops (Activity 1)
+     * Player 2
+     */
+    //% block="`Generics.orionMove` move %d from booster"
+    export function orionMoveDirectionA1PX(d: MoveDirection): void {
+        switch (d) {
+            case MoveDirection.Toward:
+                signalBlock(0, 1, 1, ORANGE_CONCRETE)
+                break;
+            case MoveDirection.Away:
+                signalBlock(0, 1, 1, default_signal_block)
+                break;
+        }
+    }
+
+    /**
+     * Prox Ops (Activity 1)
+     * Player 2
+     */
+    //% block="`Generics.orionMove` rotate %r by %o"
+    export function rotateOrionA2PX(r: Clockwise, o: RotationAmount): void {
+        let orion_rotate = 0
+        switch (r) {
+            case Clockwise.Clockwise:
+                orion_rotate = 17 // LOG
+                break;
+            case Clockwise.Counterclockwise:
+                orion_rotate = 236 // CONCRETE
+                break;
+        }
+
+        let rotation_amount = 0
+        switch (o) {
+            case RotationAmount.a:
+                rotation_amount = 0
+                break;
+            case RotationAmount.b:
+                rotation_amount = 1
+                break;
+            case RotationAmount.c:
+                rotation_amount = 4
+                break;
+        }
+
+        signalBlock(0, 1, 1, blocks.blockWithData(blocks.blockById(orion_rotate), rotation_amount))
+    }
+
+    /**
+     * Prox Ops (Activity 1)
+     * Player 2
+     */
+    //% block="`Generics.orionMove` adjust %r by %o"
+    export function rollOrionA2PX(r: RotationType, o: RotationAmount): void {
+        let orion_rotate = 0
+        switch (r) {
+            case RotationType.Pitch:
+                orion_rotate = 17 // LOG
+                break;
+            case RotationType.Yaw:
+                orion_rotate = 1 // STONE
+                break;
+            case RotationType.Roll:
+                orion_rotate = 236 // CONCRETE
+                break;
+        }
+
+        let rotation_amount = 0
+        switch (o) {
+            case RotationAmount.a:
+                rotation_amount = 0
+                break;
+            case RotationAmount.b:
+                rotation_amount = 2
+                break;
+            case RotationAmount.c:
+                rotation_amount = 4
+                break;
+        }
+
+        signalBlock(0, 1, 1, blocks.blockWithData(blocks.blockById(orion_rotate), rotation_amount))
+    }
+    
 
     /**
      * Docking Test (Activity 2) Player 2
