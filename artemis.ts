@@ -150,7 +150,7 @@ namespace artemis {
     /**
      * Docking Test (Activity 2) Player 2
      */
-    //% block="`Generics.collectDebris` collect debris"
+    //% block="`rotate %r to %o"
     export function rotateRingA2P2(r: DockingRings, o: DockingObjective): void {
         let docking_ring = 0
         switch (r) {
@@ -184,7 +184,7 @@ namespace artemis {
     /**
      * Docking Test (Activity 2) Player 3
      */
-    //% block="`Generics.collectDebris` collect debris"
+    //% block="rotate %r to %o"
     export function rotateRingA2P3(r: DockingRings, o: DockingObjective): void {
         let docking_ring = 0
         switch (r) {
@@ -218,7 +218,7 @@ namespace artemis {
     /**
      * Docking Test (Activity 2) Player 4
      */
-    //% block="`Generics.collectDebris` collect debris"
+    //% block="rotate %r to %o"
     export function rotateRingA2P4(r: DockingRings, o: DockingObjective): void {
         let docking_ring = 0
         switch (r) {
