@@ -453,7 +453,7 @@ namespace artemis {
      * Crew Meals (Activity 9)
      * Player 1
      */
-    //% block="`Generics.roverMove` place freeze-dried %i"
+    //% block="`Generics.place` place freeze-dried %i"
     export function placeIngredientA9P1(i: CrewMealIngredients): void {
         switch (i) {
             case CrewMealIngredients.PlacePeanut:
