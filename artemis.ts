@@ -491,6 +491,37 @@ namespace artemis {
     }
 
     /**
+     * Crew Meals (Activity 9)
+     * Player 2
+     */
+    //% block="`Generics.plus` add %i"
+    export function addIngredientsA9P2(i: CrewMealAddIngredients): void {
+        switch (i) {
+            case CrewMealAddIngredients.AddAnchovies:
+                signalBlock(0, 9, 2, default_signal_block)
+                break;
+            case CrewMealAddIngredients.AddCheese:
+                signalBlock(0, 9, 2, ORANGE_CONCRETE)
+                break;
+            case CrewMealAddIngredients.AddPepperoni:
+                signalBlock(0, 9, 2, YELLOW_CONCRETE)
+                break;
+            case CrewMealAddIngredients.AddTomato:
+                signalBlock(0, 9, 2, GREEN_CONCRETE)
+                break;
+        }
+    }
+
+    /**
+     * Crew Meals (Activity 9)
+     * Player 2
+     */
+    //% block="`Generics.pizzaServe` serve pizza"
+    export function servePizzaA9P2(): void {
+        signalBlock(1, 9, 2, default_signal_block)
+    }
+
+    /**
      * Asteroid Mining (Activity 12)
      */
     //% block="`Generics.mineBlock` mine asteroid"
