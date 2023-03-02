@@ -356,6 +356,44 @@ namespace artemis {
     }
 
     /**
+     * Moon Mapping (Activity 8) Player 1
+     */
+    //% block="`Generics.markLocation` set location $x_axis $y_axis"
+    export function setLocationA8P1(x_axis: matrix_x_axis_full, y_axis: matrix_y_axis_full): void {
+        signalBlock(0, 8, 1, blocks.blockWithData(blocks.blockById(x_axis), y_axis))
+    }
+
+    /**
+     * Moon Mapping (Activity 8) Player 2
+     */
+    //% block="`Generics.takePicture` take picture"
+    export function takePictureA8P2(): void {
+        signalBlock(0, 8, 2, default_signal_block)
+    }
+
+    /**
+     * Moon Mapping (Activity 8) Player 2
+     * Player 1
+     */
+    //% block="`Generics.viperMove` VIPER move %d by %n"
+    export function viperMoveA8P2(d: FourDirectionArrows, n: number): void {
+        switch (d) {
+            case FourDirectionArrows.ArrowUpOrange:
+                agent.move(SixDirection.Up, n * 3)
+                break;
+            case FourDirectionArrows.ArrowDownMagenta:
+                agent.move(SixDirection.Down, n * 3)
+                break;
+            case FourDirectionArrows.ArrowRightYellow:
+                agent.move(SixDirection.Right, n * 3)
+                break;
+            case FourDirectionArrows.ArrowLeftBlue:
+                agent.move(SixDirection.Left, n * 3)
+                break;
+        }
+    }
+
+    /**
      * Asteroid Mining (Activity 12)
      */
     //% block="`Generics.mineBlock` mine asteroid"
