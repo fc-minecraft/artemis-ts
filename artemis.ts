@@ -39,13 +39,53 @@ enum DockingObjective {
     GotoRed = 2
 }
 
-enum extendArm {
-    //% block="1"
+enum CrewMealIngredients {
+    //% blockIdentity="blocks.custom" enumval=0 block="Place Peanuts"
+    //% jres alias=PLACE_PEANUTS
+    PlacePeanut = 0,
+    //% blockIdentity="blocks.custom" enumval=1 block="Place Green Peppers"
+    //% jres alias=PLACE_GREEN_PEPPERS
+    PlacePepper = 1,
+    //% blockIdentity="blocks.custom" enumval=2 block="Place Tomato Sauce"
+    //% jres alias=PLACE_TOMATO_SAUCE
+    PlaceSauce = 2
+}
+
+enum CrewMealAddIngredients {
+    //% blockIdentity="blocks.custom" enumval=0 block="Add Anchovies"
+    //% jres alias=ADD_ANCHOIVES
+    AddAnchovies = 0,
+    //% blockIdentity="blocks.custom" enumval=1 block="Add Cheese"
+    //% jres alias=ADD_CHEESE
+    AddCheese = 1,
+    //% blockIdentity="blocks.custom" enumval=2 block="Add Pepperoni"
+    //% jres alias=ADD_PEPPERONI
+    AddPepperoni = 2,
+    //% blockIdentity="blocks.custom" enumval=2 block="Add Tomato"
+    //% jres alias=ADD_TOMATO
+    AddTomato = 3
+}
+
+enum RehydrationOptions {
+    //% blockIdentity="blocks.custom" enumval=1 block="25 ml"
+    //% jres alias=25_ML
+    A25Ml = 1,
+    //% blockIdentity="blocks.custom" enumval=2 block="50 ml"
+    //% jres alias=50_ML
+    A50Ml = 2,
+    //% blockIdentity="blocks.custom" enumval=2 block="75 ml"
+    //% jres alias=75_ML
+    A75Ml = 3,
+    //% blockIdentity="blocks.custom" enumval=0 block="100 ml"
+    //% jres alias=100_ML
+    A100Ml = 0
+}
+
+enum onOffToggle {
+    //% block="on"
     a,
-    //% block="2"
-    b,
-    //% block="3"
-    c
+    //% block="off"
+    b
 }
 
 enum matrix_y_axis_full {
@@ -389,6 +429,63 @@ namespace artemis {
                 break;
             case FourDirectionArrows.ArrowLeftBlue:
                 agent.move(SixDirection.Left, n * 3)
+                break;
+        }
+    }
+
+    /**
+     * Crew Meals (Activity 9)
+     * Player 1
+     */
+    //% block="`Generics.PowerSwitch` place freeze-dried %i"
+    export function togglePowerA9P1(i: onOffToggle): void {
+        switch (i) {
+            case onOffToggle.a:
+                signalBlock(0, 9, 1, default_signal_block)
+                break;
+            case onOffToggle.b:
+                signalBlock(0, 9, 1, ORANGE_CONCRETE)
+                break;
+        }
+    }
+
+    /**
+     * Crew Meals (Activity 9)
+     * Player 1
+     */
+    //% block="`Generics.roverMove` place freeze-dried %i"
+    export function placeIngredientA9P1(i: CrewMealIngredients): void {
+        switch (i) {
+            case CrewMealIngredients.PlacePeanut:
+                signalBlock(1, 9, 1, ORANGE_CONCRETE)
+                break;
+            case CrewMealIngredients.PlacePepper:
+                signalBlock(1, 9, 1, ORANGE_CONCRETE)
+                break;
+            case CrewMealIngredients.PlaceSauce:
+                signalBlock(1, 9, 1, default_signal_block)
+                break;
+        }
+    }
+
+    /**
+     * Crew Meals (Activity 9)
+     * Player 1
+     */
+    //% block="`Generics.Rehydrate` rehydrate with %i water"
+    export function rehydrateA9P1(i: RehydrationOptions): void {
+        switch (i) {
+            case RehydrationOptions.A25Ml:
+                signalBlock(2, 9, 1, ORANGE_CONCRETE)
+                break;
+            case RehydrationOptions.A50Ml:
+                signalBlock(2, 9, 1, ORANGE_CONCRETE)
+                break;
+            case RehydrationOptions.A75Ml:
+                signalBlock(2, 9, 1, default_signal_block)
+                break;
+            case RehydrationOptions.A100Ml:
+                signalBlock(2, 9, 1, ORANGE_CONCRETE)
                 break;
         }
     }

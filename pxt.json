@@ -13,7 +13,10 @@
         "generics.jres",
         "FourDirectionArrows.jres",
         "DockingObjective.jres",
-        "DockingRings.jres"
+        "DockingRings.jres",
+        "CrewMealIngredients.jres",
+        "CrewMealAddIngredients.jres",
+        "RehydrationOptions.jres"
     ],
     "testFiles": [],
     "targetVersions": {
