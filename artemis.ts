@@ -150,7 +150,7 @@ namespace artemis {
     /**
      * Docking Test (Activity 2) Player 2
      */
-    //% block="`rotate %r to %o"
+    //% block="rotate %r to %o"
     export function rotateRingA2P2(r: DockingRings, o: DockingObjective): void {
         let docking_ring = 0
         switch (r) {

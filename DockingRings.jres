@@ -3,7 +3,7 @@
         "namespace": "DockingRings",
         "dataEncoding": "base64"
     },
-    "middleRing": {
+    "MiddleRing": {
         "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADr8AAA6/ATgFUyQAAAF9SURBVFhHzZZBTsQwDEULYtUNN+keVew5EYeYE7FH1ex7E04wg4tdOcbfdqoRw5OqdEZN/4uTtH0Yx/Ey3JFNYJom/vm3rOvaJzDPM5/FLMvCZzFlgWqwJRNJBY4GW5BIKOCFV0tb7QsFohucT89bi3h5/9raioQrYDv+Cn79+GkRn29bg0S0BAk88rlLE07BWTjB14mwHbWlEfDKtof3AiRsBqwAdYLhVGbvsCgJxBO3jRksG4fI/FrOJ5ZwpOmekkGtZMAKoNHrxaUPwhVLqhAuwobv0UdbrJHwpgNQF2B0OJVRT5cnltEtIOhgfd7LYYFbcVhAl/tI6YVuATvndk30UhdQ28kLkv/gwwsABdB20hL6INz9rravR/M2tOWEo0H7HFxLAt5UhW9D6gAfKhTkHZZk9EQjIGYaKJGhwqOFGi5C6bhLVET4Oi/co/RJpq3dhabQJY/uQ/zfj1IhK18VJJ4KCEdFsoqVBYSqSHWqugVuzS7Av+/AMFwBlQQQS3vPNgwAAAAASUVORK5CYII="
     },
     "InnerRing": {
