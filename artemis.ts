@@ -178,7 +178,7 @@ namespace artemis {
                 break;
         }
 
-        signalBlock(0, 2, 2, blocks.blockWithData(blocks.blockById(docking_ring), docking_color))
+        signalBlock(0, 2, 1, blocks.blockWithData(blocks.blockById(docking_ring), docking_color))
     }
 
     /**
@@ -212,7 +212,7 @@ namespace artemis {
                 break;
         }
 
-        signalBlock(0, 2, 3, blocks.blockWithData(blocks.blockById(docking_ring), docking_color))
+        signalBlock(0, 2, 1, blocks.blockWithData(blocks.blockById(docking_ring), docking_color))
     }
 
     /**
@@ -246,7 +246,7 @@ namespace artemis {
                 break;
         }
 
-        signalBlock(0, 2, 4, blocks.blockWithData(blocks.blockById(docking_ring), docking_color))
+        signalBlock(0, 2, 1, blocks.blockWithData(blocks.blockById(docking_ring), docking_color))
     }
 
     /**
