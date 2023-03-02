@@ -11,10 +11,9 @@
         "artemis.ts",
         "tutorial-info-cache.json",
         "generics.jres",
-        "FourDirectionForwardBackFake.jres",
-        "FourDirectionForwardBackFake2.jres",
-        "FourDirectionUpDown.jres",
-        "FourDirectionArrows.jres"
+        "FourDirectionArrows.jres",
+        "DockingObjective.jres",
+        "DockingRings.jres"
     ],
     "testFiles": [],
     "targetVersions": {

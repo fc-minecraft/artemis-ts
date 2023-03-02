@@ -15,6 +15,30 @@ enum FourDirectionArrows {
     ArrowLeftBlue = 983
 }
 
+enum DockingRings {
+    //% blockIdentity="blocks.custom" enumval=17 block="Docking Ring Inner"
+    //% jres alias=DOCKING_RING_INNER
+    InnerRing = 17,
+    //% blockIdentity="blocks.custom" enumval=236 block="Docking Ring Middle"
+    //% jres alias=DOCKING_RING_MIDDLE
+    MiddleRing = 236,
+    //% blockIdentity="blocks.custom" enumval=159 block="Docking Ring Outer"
+    //% jres alias=DOCKING_RING_OUTER
+    OuterRing = 159
+}
+
+enum DockingObjective {
+    //% blockIdentity="blocks.custom" enumval=0 block="Set to Blue"
+    //% jres alias=SET_TO_BLUE
+    GotoBlue = 0,
+    //% blockIdentity="blocks.custom" enumval=1 block="Set to Green"
+    //% jres alias=SET_TO_GREEN
+    GotoGreen = 1,
+    //% blockIdentity="blocks.custom" enumval=2 block="Set to Red"
+    //% jres alias=SET_TO_RED
+    GotoRed = 2
+}
+
 enum extendArm {
     //% block="1"
     a,
@@ -121,6 +145,108 @@ namespace artemis {
     //% block="`Generics.collectDebris` collect debris"
     export function collectDebrisA16(): void {
         signalBlock(0, 16, 1, default_signal_block)
+    }
+
+    /**
+     * Docking Test (Activity 2) Player 2
+     */
+    //% block="`Generics.collectDebris` collect debris"
+    export function rotateRingA2P2(r: DockingRings, o: DockingObjective): void {
+        let docking_ring = 0
+        switch (r) {
+            case DockingRings.InnerRing:
+                docking_ring = 17 // LOG
+                break;
+            case DockingRings.MiddleRing:
+                docking_ring = 236 // CONCRETE
+                break;
+            case DockingRings.OuterRing:
+                docking_ring = 159 // TERRACOTTA
+                break;
+        }
+
+        let docking_color = 0
+        switch (o) {
+            case DockingObjective.GotoBlue:
+                docking_color = 0
+                break;
+            case DockingObjective.GotoGreen:
+                docking_color = 1
+                break;
+            case DockingObjective.GotoRed:
+                docking_color = 2
+                break;
+        }
+
+        signalBlock(0, 2, 2, blocks.blockWithData(blocks.blockById(docking_ring), docking_color))
+    }
+
+    /**
+     * Docking Test (Activity 2) Player 3
+     */
+    //% block="`Generics.collectDebris` collect debris"
+    export function rotateRingA2P3(r: DockingRings, o: DockingObjective): void {
+        let docking_ring = 0
+        switch (r) {
+            case DockingRings.InnerRing:
+                docking_ring = 17 // LOG
+                break;
+            case DockingRings.MiddleRing:
+                docking_ring = 236 // CONCRETE
+                break;
+            case DockingRings.OuterRing:
+                docking_ring = 159 // TERRACOTTA
+                break;
+        }
+
+        let docking_color = 0
+        switch (o) {
+            case DockingObjective.GotoBlue:
+                docking_color = 0
+                break;
+            case DockingObjective.GotoGreen:
+                docking_color = 1
+                break;
+            case DockingObjective.GotoRed:
+                docking_color = 2
+                break;
+        }
+
+        signalBlock(0, 2, 3, blocks.blockWithData(blocks.blockById(docking_ring), docking_color))
+    }
+
+    /**
+     * Docking Test (Activity 2) Player 4
+     */
+    //% block="`Generics.collectDebris` collect debris"
+    export function rotateRingA2P4(r: DockingRings, o: DockingObjective): void {
+        let docking_ring = 0
+        switch (r) {
+            case DockingRings.InnerRing:
+                docking_ring = 17 // LOG
+                break;
+            case DockingRings.MiddleRing:
+                docking_ring = 236 // CONCRETE
+                break;
+            case DockingRings.OuterRing:
+                docking_ring = 159 // TERRACOTTA
+                break;
+        }
+
+        let docking_color = 0
+        switch (o) {
+            case DockingObjective.GotoBlue:
+                docking_color = 0
+                break;
+            case DockingObjective.GotoGreen:
+                docking_color = 1
+                break;
+            case DockingObjective.GotoRed:
+                docking_color = 2
+                break;
+        }
+
+        signalBlock(0, 2, 4, blocks.blockWithData(blocks.blockById(docking_ring), docking_color))
     }
 
     /**
