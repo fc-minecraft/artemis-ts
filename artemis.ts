@@ -91,7 +91,7 @@ enum Clockwise {
 enum MoveDirection {
     //% block="toward"
     Toward,
-    //% block="away"
+    //% block="away from"
     Away
 }
 
@@ -223,7 +223,7 @@ namespace artemis {
      * Prox Ops (Activity 1)
      * Player 2
      */
-    //% block="`Generics.orionMove` move %d from booster"
+    //% block="`Generics.orionMove` move %d booster"
     export function orionMoveDirectionA1PX(d: MoveDirection): void {
         switch (d) {
             case MoveDirection.Toward:
