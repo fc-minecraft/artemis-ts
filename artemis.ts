@@ -437,7 +437,7 @@ namespace artemis {
      * Crew Meals (Activity 9)
      * Player 1
      */
-    //% block="`Generics.PowerSwitch` place freeze-dried %i"
+    //% block="`Generics.PowerSwitch` toggle power %i"
     export function togglePowerA9P1(i: onOffToggle): void {
         switch (i) {
             case onOffToggle.a:
