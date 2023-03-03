@@ -159,7 +159,7 @@ enum matrix_x_axis_full {
     //% block="G"  
     RedSandstoneSlab = 182, //STONE_SLAB2
     //% block="H"  
-    OakWoodSlab = 158,  // WOODEN_SLAB
+    WhiteShulkerBox = 218, // SHULKER_BOX
     //% block="I"  
     DoubleStoneSlab = 43, // DOUBLE_STONE_SLAB
     //% block="J"  
@@ -167,7 +167,8 @@ enum matrix_x_axis_full {
     //% block="K"  
     DoubleWoodenSlab = 157, // DOUBLE_WOODEN_SLAB
     //% block="L"  
-    WhiteShulkerBox = 218 // SHULKER_BOX
+    OakWoodSlab = 158  // WOODEN_SLAB
+    
 }
 
 // global variables
@@ -448,7 +449,7 @@ namespace artemis {
      * Building Blocks (Activity 5)
      * Player 2
      */
-    //% block="`Generics.meltRegolith` melt regolith"
+    //% block="`Generics.meltRegolith` process regolith"
     export function meltRegolithA5(): void {
         signalBlock(0, 5, 2, default_signal_block)
     }
