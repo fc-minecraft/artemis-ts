@@ -515,7 +515,7 @@ namespace artemis {
     /**
      * Moon Mapping (Activity 8) Player 1
      */
-    //% block="`Generics.markLocation` set location $x_axis $y_axis"
+    //% block="`Generics.markLocation` mark location $x_axis $y_axis"
     export function setLocationA8P1(x_axis: matrix_x_axis_full, y_axis: matrix_y_axis_full): void {
         signalBlock(0, 8, 1, blocks.blockWithData(blocks.blockById(x_axis), y_axis))
     }
