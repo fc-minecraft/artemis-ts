@@ -69,16 +69,16 @@ enum CrewMealAddIngredients {
 enum RehydrationOptions {
     //% blockIdentity="blocks.custom" enumval=1 block="25 ml"
     //% jres alias=25_ML
-    A25Ml,
-    //% blockIdentity="blocks.custom" enumval=2 block="50 ml"
+    A25ML = 1,
+    //% blockIdentity="blocks.custom" enumval=1 block="50 ml"
     //% jres alias=50_ML
-    A50Ml,
-    //% blockIdentity="blocks.custom" enumval=2 block="75 ml"
+    A50ML = 1,
+    //% blockIdentity="blocks.custom" enumval=0 block="75 ml"
     //% jres alias=75_ML
-    A75Ml,
-    //% blockIdentity="blocks.custom" enumval=0 block="100 ml"
+    A75ML = 0,
+    //% blockIdentity="blocks.custom" enumval=1 block="100 ml"
     //% jres alias=100_ML
-    A100Ml
+    A100ML = 1
 }
 
 enum Clockwise {
@@ -592,17 +592,17 @@ namespace artemis {
     //% block="`Generics.Rehydrate` rehydrate with %i water"
     export function rehydrateA9P1(i: RehydrationOptions): void {
         switch (i) {
-            case RehydrationOptions.A25Ml:
+            case RehydrationOptions.A25ML:
+                signalBlock(2, 9, 1, YELLOW_CONCRETE)
+                break;
+            case RehydrationOptions.A50ML:
                 signalBlock(2, 9, 1, ORANGE_CONCRETE)
                 break;
-            case RehydrationOptions.A50Ml:
-                signalBlock(2, 9, 1, ORANGE_CONCRETE)
+            case RehydrationOptions.A75ML:
+                signalBlock(2, 9, 1, WHITE_CONCRETE)
                 break;
-            case RehydrationOptions.A75Ml:
-                signalBlock(2, 9, 1, default_signal_block)
-                break;
-            case RehydrationOptions.A100Ml:
-                signalBlock(2, 9, 1, ORANGE_CONCRETE)
+            case RehydrationOptions.A100ML:
+                signalBlock(2, 9, 1, GREEN_CONCRETE)
                 break;
         }
     }
