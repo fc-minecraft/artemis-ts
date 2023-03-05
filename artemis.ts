@@ -69,16 +69,16 @@ enum CrewMealAddIngredients {
 enum RehydrationOptions {
     //% blockIdentity="blocks.custom" enumval=1 block="25 ml"
     //% jres alias=25_ML
-    A25Ml = 1,
+    A25Ml,
     //% blockIdentity="blocks.custom" enumval=2 block="50 ml"
     //% jres alias=50_ML
-    A50Ml = 2,
+    A50Ml,
     //% blockIdentity="blocks.custom" enumval=2 block="75 ml"
     //% jres alias=75_ML
-    A75Ml = 3,
+    A75Ml,
     //% blockIdentity="blocks.custom" enumval=0 block="100 ml"
     //% jres alias=100_ML
-    A100Ml = 0
+    A100Ml
 }
 
 enum Clockwise {
