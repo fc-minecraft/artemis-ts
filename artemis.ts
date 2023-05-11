@@ -15,6 +15,18 @@ enum FourDirectionArrows {
     ArrowLeftBlue = 983
 }
 
+enum IssHelpColors {
+    //% blockIdentity="blocks.custom" enumval=0 block="Blue Cargo"
+    //% jres alias=BLUE_CARGO
+    BlueCargo = 0,
+    //% blockIdentity="blocks.custom" enumval=1 block="Yellow Cargo"
+    //% jres alias=YELLOW_CARGO
+    YellowCargo = 1,
+    //% blockIdentity="blocks.custom" enumval=2 block="Magenta Cargo"
+    //% jres alias=MAGENT_CARGO
+    MagentaCargo = 2
+}
+
 enum DockingRings {
     //% blockIdentity="blocks.custom" enumval=17 block="Docking Ring Inner"
     //% jres alias=DOCKING_RING_INNER
@@ -168,7 +180,7 @@ enum matrix_x_axis_full {
     DoubleWoodenSlab = 157, // DOUBLE_WOODEN_SLAB
     //% block="L"  
     OakWoodSlab = 158  // WOODEN_SLAB
-    
+
 }
 
 // global variables
@@ -302,7 +314,7 @@ namespace artemis {
 
         signalBlock(0, 1, 1, blocks.blockWithData(blocks.blockById(orion_rotate), rotation_amount))
     }
-    
+
 
     /**
      * Docking Test (Activity 2) Player 2
@@ -669,12 +681,98 @@ namespace artemis {
     }
 
     /**
+     * Water Recycling (Activity 20)
+     */
+    //% block="`Generics.agentMove` agent move %d by %n"
+    export function agentMoveA20(d: FourDirectionArrows, n: number): void {
+        switch (d) {
+            case FourDirectionArrows.ArrowUpOrange:
+                agent.move(SixDirection.Up, n)
+                break;
+            case FourDirectionArrows.ArrowDownMagenta:
+                agent.move(SixDirection.Down, n)
+                break;
+            case FourDirectionArrows.ArrowRightYellow:
+                agent.move(SixDirection.Forward, n)
+                break;
+            case FourDirectionArrows.ArrowLeftBlue:
+                agent.move(SixDirection.Back, n)
+                break;
+        }
+    }
+
+    /**
+     * Water Recycling (Activity 20)
+     */
+    //% block="`Generics.takePicture` remove debris"
+    export function removeDebrisA20(): void {
+        signalBlock(0, 20, 1, default_signal_block)
+    }
+
+    /**
      * Lunar Garden 1 (Activity 13)
      */
     //% block="`Generics.plantSeed` plant seed"
     export function lunarGarden1A13(): void {
         signalBlock(0, 13, 1, default_signal_block)
     }
+
+    /**
+     * ISS Help (Activity 21)
+     * GOAL Blue
+     */
+    //% block="`Generics.place` retrieve cargo %i"
+    export function retrieveBlueGoalA21(c: IssHelpColors): void {
+        let docking_ring = RED_CONCRETE
+        switch (c) {
+            case IssHelpColors.BlueCargo:
+                docking_ring = default_signal_block
+                break;
+        }
+
+        signalBlock(0, 21, 1, docking_ring)
+    }
+
+    /**
+     * ISS Help (Activity 21)
+     * GOAL Yellow
+     */
+    //% block="`Generics.place` retrieve cargo %i"
+    export function retrieveYellowGoalA21(c: IssHelpColors): void {
+        let docking_ring = RED_CONCRETE
+        switch (c) {
+            case IssHelpColors.YellowCargo:
+                docking_ring = default_signal_block
+                break;
+        }
+
+        signalBlock(0, 21, 1, docking_ring)
+    }
+    /**
+     * ISS Help (Activity 21)
+     * GOAL Magenta
+     */
+    //% block="`Generics.place` retrieve cargo %i"
+    export function retrieveMagentaGoalA21(c: IssHelpColors): void {
+        let docking_ring = RED_CONCRETE
+        switch (c) {
+            case IssHelpColors.MagentaCargo:
+                docking_ring = default_signal_block
+                break;
+        }
+
+        signalBlock(0, 21, 1, docking_ring)
+    }
+
+    /**
+     * ISS Help (Activity 21)
+     * load cargo
+     */
+    //% block="`Generics.plantSeed` load cargo onto ISS"
+    export function loadCargoA21(): void {
+        signalBlock(0, 21, 1, ORANGE_CONCRETE)
+    }
+
 
     /**
      * Agent Move Footsize 1
@@ -704,7 +802,7 @@ namespace artemis {
     export function agentMoveFoot3(d: FourDirectionArrows, n: number): void {
         switch (d) {
             case FourDirectionArrows.ArrowUpOrange:
-                agent.move(SixDirection.Up, n*3)
+                agent.move(SixDirection.Up, n * 3)
                 break;
             case FourDirectionArrows.ArrowDownMagenta:
                 agent.move(SixDirection.Down, n * 3)
@@ -815,9 +913,17 @@ namespace artemis {
         signalBlock(0, 18, 1, blocks.blockWithData(blocks.blockById(x_axis), y_axis))
     }
 
+    /**
+     * Laser Alignment (Activity 19)
+     */
+    //% block="`Generics.deployCubesat` set alignment to $x_axis $y_axis"
+    export function setAlignmentA19(x_axis: matrix_x_axis_full, y_axis: matrix_y_axis_full): void {
+        signalBlock(0, 19, 1, blocks.blockWithData(blocks.blockById(x_axis), y_axis))
+    }
+
     // helper functions
-    function signalBlock(step: number, activity: number, player: number, block: Block) : void{
-        blocks.place( block, world(step, activity, player))
+    function signalBlock(step: number, activity: number, player: number, block: Block): void {
+        blocks.place(block, world(step, activity, player))
         loops.pause(communicationsTimeout)
     }
 
