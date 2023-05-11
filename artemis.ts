@@ -16,13 +16,13 @@ enum FourDirectionArrows {
 }
 
 enum IssHelpColors {
-    //% blockIdentity="blocks.custom" enumval=0 block="Blue Cargo"
+    //% blockIdentity="blocks.custom" enumval=0 block="blue"
     //% jres alias=BLUE_CARGO
     BlueCargo = 0,
-    //% blockIdentity="blocks.custom" enumval=1 block="Yellow Cargo"
+    //% blockIdentity="blocks.custom" enumval=1 block="yellow"
     //% jres alias=YELLOW_CARGO
     YellowCargo = 1,
-    //% blockIdentity="blocks.custom" enumval=2 block="Magenta Cargo"
+    //% blockIdentity="blocks.custom" enumval=2 block="magenta"
     //% jres alias=MAGENT_CARGO
     MagentaCargo = 2
 }
