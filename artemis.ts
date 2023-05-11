@@ -721,7 +721,7 @@ namespace artemis {
      * ISS Help (Activity 21)
      * GOAL Blue
      */
-    //% block="`Generics.place` retrieve cargo %i"
+    //% block="`Generics.place` retrieve cargo %c"
     export function retrieveBlueGoalA21(c: IssHelpColors): void {
         let docking_ring = RED_CONCRETE
         switch (c) {
@@ -768,7 +768,7 @@ namespace artemis {
      * ISS Help (Activity 21)
      * load cargo
      */
-    //% block="`Generics.plantSeed` load cargo onto ISS"
+    //% block="`Generics.plantSeed` load cargo"
     export function loadCargoA21(): void {
         signalBlock(0, 21, 1, ORANGE_CONCRETE)
     }
