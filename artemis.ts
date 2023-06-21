@@ -93,6 +93,19 @@ enum RehydrationOptions {
     A100ML = 1
 }
 
+enum ExerciseTimes {
+    //% block="70 min"
+    a,
+    //% block="90 min"
+    b,
+    //% block="110 min"
+    c,
+    //% block="130 min"
+    d,
+    //% block="150 min"
+    e
+}
+
 enum Clockwise {
     //% block="clockwise"
     Clockwise,
@@ -416,6 +429,82 @@ namespace artemis {
         }
 
         signalBlock(0, 2, 1, blocks.blockWithData(blocks.blockById(docking_ring), docking_color))
+    }
+
+
+    /**
+     * Human Physiology (Activity 4) Player 2
+     */
+    //% block="exercise for %t"
+    export function exerciseTimeA4P2(t: ExerciseTimes): void {
+        switch (t) {
+            case ExerciseTimes.a:
+                signalBlock(0, 4, 2, default_signal_block)
+                break;
+            case ExerciseTimes.b:
+                signalBlock(0, 4, 2, ORANGE_CONCRETE)
+                break;
+            case ExerciseTimes.c:
+                signalBlock(0, 4, 2, ORANGE_CONCRETE)
+                break;
+            case ExerciseTimes.d:
+                signalBlock(0, 4, 2, ORANGE_CONCRETE)
+                break;
+            case ExerciseTimes.e:
+                signalBlock(0, 4, 2, ORANGE_CONCRETE)
+                break;
+
+        }
+    }
+
+    /**
+     * Human Physiology (Activity 4) Player 3
+     */
+    //% block="exercise for %t"
+    export function exerciseTimeA4P3(t: ExerciseTimes): void {
+        switch (t) {
+            case ExerciseTimes.a:
+                signalBlock(0, 4, 3, ORANGE_CONCRETE)
+                break;
+            case ExerciseTimes.b:
+                signalBlock(0, 4, 3, ORANGE_CONCRETE)
+                break;
+            case ExerciseTimes.c:
+                signalBlock(0, 4, 3, default_signal_block)
+                break;
+            case ExerciseTimes.d:
+                signalBlock(0, 4, 3, ORANGE_CONCRETE)
+                break;
+            case ExerciseTimes.e:
+                signalBlock(0, 4, 3, ORANGE_CONCRETE)
+                break;
+
+        }
+    }
+
+    /**
+     * Human Physiology (Activity 4) Player 4
+     */
+    //% block="exercise for %t"
+    export function exerciseTimeA4P4(t: ExerciseTimes): void {
+        switch (t) {
+            case ExerciseTimes.a:
+                signalBlock(0, 4, 4, ORANGE_CONCRETE)
+                break;
+            case ExerciseTimes.b:
+                signalBlock(0, 4, 4, ORANGE_CONCRETE)
+                break;
+            case ExerciseTimes.c:
+                signalBlock(0, 4, 4, ORANGE_CONCRETE)
+                break;
+            case ExerciseTimes.d:
+                signalBlock(0, 4, 4, ORANGE_CONCRETE)
+                break;
+            case ExerciseTimes.e:
+                signalBlock(0, 4, 4, default_signal_block)
+                break;
+
+        }
     }
 
     /**
