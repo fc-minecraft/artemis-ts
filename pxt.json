@@ -16,7 +16,8 @@
         "DockingRings.jres",
         "CrewMealIngredients.jres",
         "CrewMealAddIngredients.jres",
-        "RehydrationOptions.jres"
+        "RehydrationOptions.jres",
+        "IssHelpColors.jres"
     ],
     "testFiles": [],
     "targetVersions": {
