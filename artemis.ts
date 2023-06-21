@@ -793,7 +793,7 @@ namespace artemis {
     /**
      * Water Recycling (Activity 20)
      */
-    //% block="`Generics.takePicture` remove debris"
+    //% block="`Generics.removeDebris` remove debris"
     export function removeDebrisA20(): void {
         signalBlock(0, 20, 1, default_signal_block)
     }
@@ -810,7 +810,7 @@ namespace artemis {
      * ISS Help (Activity 21)
      * GOAL Blue
      */
-    //% block="`Generics.place` retrieve cargo %c"
+    //% block="`Generics.retrieveCargo` retrieve cargo %c"
     export function retrieveBlueGoalA21(c: IssHelpColors): void {
         let docking_ring = RED_CONCRETE
         switch (c) {
@@ -826,7 +826,7 @@ namespace artemis {
      * ISS Help (Activity 21)
      * GOAL Yellow
      */
-    //% block="`Generics.place` retrieve cargo %i"
+    //% block="`Generics.retrieveCargo` retrieve cargo %i"
     export function retrieveYellowGoalA21(c: IssHelpColors): void {
         let docking_ring = RED_CONCRETE
         switch (c) {
@@ -841,7 +841,7 @@ namespace artemis {
      * ISS Help (Activity 21)
      * GOAL Magenta
      */
-    //% block="`Generics.place` retrieve cargo %i"
+    //% block="`Generics.retrieveCargo` retrieve cargo %i"
     export function retrieveMagentaGoalA21(c: IssHelpColors): void {
         let docking_ring = RED_CONCRETE
         switch (c) {
@@ -1005,7 +1005,7 @@ namespace artemis {
     /**
      * Laser Alignment (Activity 19)
      */
-    //% block="`Generics.deployCubesat` set alignment to $x_axis $y_axis"
+    //% block="`Generics.setAlignment` set alignment to $x_axis $y_axis"
     export function setAlignmentA19(x_axis: matrix_x_axis_full, y_axis: matrix_y_axis_full): void {
         signalBlock(0, 19, 1, blocks.blockWithData(blocks.blockById(x_axis), y_axis))
     }
