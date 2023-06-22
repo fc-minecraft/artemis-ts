@@ -431,6 +431,33 @@ namespace artemis {
         signalBlock(0, 2, 1, blocks.blockWithData(blocks.blockById(docking_ring), docking_color))
     }
 
+    /**
+     * Radiation Drill (Activity 3)
+     * Player 4
+     */
+    //% block="`Generics.clearCargo` clear cargo"
+    export function clearShelterA3P2(): void {
+        signalBlock(0, 3, 2, default_signal_block)
+    }
+
+    /**
+     * Radiation Drill (Activity 3)
+     * Player 3
+     */
+    //% block="`Generics.surroundShelter` surround shelter"
+    export function surroundShelterA3P3(): void {
+        signalBlock(0, 3, 3, default_signal_block)
+    }
+
+    /**
+     * Radiation Drill (Activity 3)
+     * Player 2
+     */
+    //% block="`Generics.coverShelter` cover shelter"
+    export function coverShelterA3P4(): void {
+        signalBlock(0, 3, 4, default_signal_block)
+    }
+
 
     /**
      * Human Physiology (Activity 4) Player 2
@@ -857,7 +884,7 @@ namespace artemis {
      * ISS Help (Activity 21)
      * load cargo
      */
-    //% block="`Generics.plantSeed` load cargo"
+    //% block="`Generics.loadCargo` load cargo"
     export function loadCargoA21(): void {
         signalBlock(0, 21, 1, ORANGE_CONCRETE)
     }
