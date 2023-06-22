@@ -462,7 +462,7 @@ namespace artemis {
     /**
      * Human Physiology (Activity 4) Player 2
      */
-    //% block="exercise for %t"
+    //% block="`Generics.exercise` exercise for %t"
     export function exerciseTimeA4P2(t: ExerciseTimes): void {
         switch (t) {
             case ExerciseTimes.a:
