@@ -21,7 +21,7 @@
     ],
     "testFiles": [],
     "targetVersions": {
-        "target": "1.7.7",
+        "target": "2.0.30",
         "targetId": "minecraft"
     },
     "supportedTargets": [
