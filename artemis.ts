@@ -107,16 +107,16 @@ enum ExerciseTimes {
 }
 
 enum Clockwise {
-    //% block="clockwise"
+    //% block="по часовой стрелке"
     Clockwise,
-    //% block="counterclockwise"
+    //% block="против часовой стрелки"
     Counterclockwise
 }
 
 enum MoveDirection {
-    //% block="toward"
+    //% block="к"
     Toward,
-    //% block="away from"
+    //% block="от"
     Away
 }
 
@@ -130,18 +130,18 @@ enum RotationAmount {
 }
 
 enum RotationType {
-    //% block="pitch"
+    //% block="тангаж"
     Pitch,
-    //% block="yaw"
+    //% block="рыскание"
     Yaw,
-    //% block="roll"
+    //% block="крен"
     Roll
 }
 
 enum onOffToggle {
-    //% block="on"
+    //% block="вкл"
     a,
-    //% block="off"
+    //% block="выкл"
     b
 }
 
@@ -169,29 +169,29 @@ enum matrix_y_axis_full {
 }
 
 enum matrix_x_axis_full {
-    //% block="A"  
+    //% block="A"
     LogOak = 17, // LOG
-    //% block="B"  
+    //% block="B"
     WhiteConcrete = 236, // CONCRETE
-    //% block="C"  
+    //% block="C"
     WhiteTerracotta = 159, // TERRACOTTA
-    //% block="D"  
+    //% block="D"
     WhiteStainedGlass = 241, // STAINED GLASS
-    //% block="E"  
+    //% block="E"
     WhiteStainedGlassPane = 160, // STAINED GLASS PANE
-    //% block="F"  
+    //% block="F"
     StoneSlab = 44, // STONE_SLAB
-    //% block="G"  
+    //% block="G"
     RedSandstoneSlab = 182, //STONE_SLAB2
-    //% block="H"  
+    //% block="H"
     WhiteShulkerBox = 218, // SHULKER_BOX
-    //% block="I"  
+    //% block="I"
     DoubleStoneSlab = 43, // DOUBLE_STONE_SLAB
-    //% block="J"  
+    //% block="J"
     DoubleRedSandstoneSlab = 181, // DOUBLE_STONE_SLAB2
-    //% block="K"  
+    //% block="K"
     DoubleWoodenSlab = 157, // DOUBLE_WOODEN_SLAB
-    //% block="L"  
+    //% block="L"
     OakWoodSlab = 158  // WOODEN_SLAB
 
 }
@@ -201,14 +201,13 @@ const communicationsTimeout = 100;
 const start_game_position = world(0, 7, 0)
 const default_signal_block = WHITE_CONCRETE
 
-
 //%  block="Artemis: Moon Journey" weight=200 color=#0B3D91 icon="\uf186"
 namespace artemis {
 
     /**
      * Start Game Player 1
      */
-    //% block="`Generics.blastOff` go for launch"
+    //% block="`Generics.blastOff` перейти к запуску"
     export function startGameP1(): void {
         signalBlock(0, 0, 1, default_signal_block)
     }
@@ -216,7 +215,7 @@ namespace artemis {
     /**
      * Start Game Player 2
      */
-    //% block="`Generics.blastOff` go for launch"
+    //% block="`Generics.blastOff` перейти к запуску"
     export function startGameP2(): void {
         signalBlock(0, 0, 2, default_signal_block)
     }
@@ -224,7 +223,7 @@ namespace artemis {
     /**
      * Start Game Player 3
      */
-    //% block="`Generics.blastOff` go for launch"
+    //% block="`Generics.blastOff` перейти к запуску"
     export function startGameP3(): void {
         signalBlock(0, 0, 3, default_signal_block)
     }
@@ -232,7 +231,7 @@ namespace artemis {
     /**
      * Start Game Player 4
      */
-    //% block="`Generics.blastOff` go for launch"
+    //% block="`Generics.blastOff` перейти к запуску"
     export function startGameP4(): void {
         signalBlock(0, 0, 4, default_signal_block)
     }
@@ -240,7 +239,7 @@ namespace artemis {
     /**
      * Space Junk (Activity 16) Collect Debris
      */
-    //% block="`Generics.collectDebris` collect debris"
+    //% block="`Generics.collectDebris` собрать обломки"
     export function collectDebrisA16(): void {
         signalBlock(0, 16, 1, default_signal_block)
     }
@@ -249,7 +248,7 @@ namespace artemis {
      * Prox Ops (Activity 1)
      * Player 2
      */
-    //% block="`Generics.orionMove` move %d booster"
+    //% block="`Generics.orionMove` переместить %d ускоритель"
     export function orionMoveDirectionA1PX(d: MoveDirection): void {
         switch (d) {
             case MoveDirection.Toward:
@@ -265,7 +264,7 @@ namespace artemis {
      * Prox Ops (Activity 1)
      * Player 2
      */
-    //% block="`Generics.orionMove` rotate %r by %o"
+    //% block="`Generics.orionMove` повернуть %r на %o"
     export function rotateOrionA2PX(r: Clockwise, o: RotationAmount): void {
         let orion_rotate = 0
         switch (r) {
@@ -297,7 +296,7 @@ namespace artemis {
      * Prox Ops (Activity 1)
      * Player 2
      */
-    //% block="`Generics.orionMove` adjust %r by %o"
+    //% block="`Generics.orionMove` отрегулировать %r на %o"
     export function rollOrionA2PX(r: RotationType, o: RotationAmount): void {
         let orion_rotate = 0
         switch (r) {
@@ -328,11 +327,10 @@ namespace artemis {
         signalBlock(0, 1, 1, blocks.blockWithData(blocks.blockById(orion_rotate), rotation_amount))
     }
 
-
     /**
      * Docking Test (Activity 2) Player 2
      */
-    //% block="rotate %r to %o"
+    //% block="повернуть %r к %o"
     export function rotateRingA2P2(r: DockingRings, o: DockingObjective): void {
         let docking_ring = 0
         switch (r) {
@@ -366,7 +364,7 @@ namespace artemis {
     /**
      * Docking Test (Activity 2) Player 3
      */
-    //% block="rotate %r to %o"
+    //% block="повернуть %r к %o"
     export function rotateRingA2P3(r: DockingRings, o: DockingObjective): void {
         let docking_ring = 0
         switch (r) {
@@ -400,7 +398,7 @@ namespace artemis {
     /**
      * Docking Test (Activity 2) Player 4
      */
-    //% block="rotate %r to %o"
+    //% block="повернуть %r к %o"
     export function rotateRingA2P4(r: DockingRings, o: DockingObjective): void {
         let docking_ring = 0
         switch (r) {
@@ -435,7 +433,7 @@ namespace artemis {
      * Radiation Drill (Activity 3)
      * Player 4
      */
-    //% block="`Generics.clearCargo` clear cargo"
+    //% block="`Generics.clearCargo` очистить груз"
     export function clearShelterA3P2(): void {
         signalBlock(0, 3, 2, default_signal_block)
     }
@@ -444,7 +442,7 @@ namespace artemis {
      * Radiation Drill (Activity 3)
      * Player 3
      */
-    //% block="`Generics.surroundShelter` surround shelter"
+    //% block="`Generics.surroundShelter` окружить укрытие"
     export function surroundShelterA3P3(): void {
         signalBlock(0, 3, 3, default_signal_block)
     }
@@ -453,16 +451,15 @@ namespace artemis {
      * Radiation Drill (Activity 3)
      * Player 2
      */
-    //% block="`Generics.coverShelter` cover shelter"
+    //% block="`Generics.coverShelter` накрыть укрытие"
     export function coverShelterA3P4(): void {
         signalBlock(0, 3, 4, default_signal_block)
     }
 
-
     /**
      * Human Physiology (Activity 4) Player 2
      */
-    //% block="`Generics.exercise` exercise for %t"
+    //% block="`Generics.exercise` упражнение в течение %t"
     export function exerciseTimeA4P2(t: ExerciseTimes): void {
         switch (t) {
             case ExerciseTimes.a:
@@ -487,7 +484,7 @@ namespace artemis {
     /**
      * Human Physiology (Activity 4) Player 3
      */
-    //% block="`Generics.exercise` exercise for %t"
+    //% block="`Generics.exercise` упражнение в течение %t"
     export function exerciseTimeA4P3(t: ExerciseTimes): void {
         switch (t) {
             case ExerciseTimes.a:
@@ -512,7 +509,7 @@ namespace artemis {
     /**
      * Human Physiology (Activity 4) Player 4
      */
-    //% block="`Generics.exercise` exercise for %t"
+    //% block="`Generics.exercise` упражнение в течение %t"
     export function exerciseTimeA4P4(t: ExerciseTimes): void {
         switch (t) {
             case ExerciseTimes.a:
@@ -537,7 +534,7 @@ namespace artemis {
     /**
      * Mars Recon (Activity 11)
      */
-    //% block="`Generics.takePicture` take picture"
+    //% block="`Generics.takePicture` сделать снимок"
     export function takePictureA11(): void {
         signalBlock(0, 11, 1, default_signal_block)
     }
@@ -546,7 +543,7 @@ namespace artemis {
      * Building Blocks (Activity 5)
      * Player 1
      */
-    //% block="`Generics.roverMove` rover move %d by %n"
+    //% block="`Generics.roverMove` ровер переместить %d на %n"
     export function roverMoveA5(d: FourDirectionArrows, n: number): void {
         switch (d) {
             case FourDirectionArrows.ArrowUpOrange:
@@ -568,7 +565,7 @@ namespace artemis {
      * Building Blocks (Activity 5)
      * Player 1
      */
-    //% block="`Generics.collectRegolith` collect regolith"
+    //% block="`Generics.collectRegolith` собрать реголит"
     export function collectBlockA5(): void {
         signalBlock(0, 5, 1, default_signal_block)
     }
@@ -577,7 +574,7 @@ namespace artemis {
      * Building Blocks (Activity 5)
      * Player 2
      */
-    //% block="`Generics.meltRegolith` process regolith"
+    //% block="`Generics.meltRegolith` обработать реголит"
     export function meltRegolithA5(): void {
         signalBlock(0, 5, 2, default_signal_block)
     }
@@ -586,7 +583,7 @@ namespace artemis {
      * Building Blocks (Activity 5)
      * Player 2
      */
-    //% block="`Generics.castRegolith` cast block"
+    //% block="`Generics.castRegolith` отлить блок"
     export function castBlocksA5(): void {
         signalBlock(1, 5, 2, default_signal_block)
     }
@@ -595,7 +592,7 @@ namespace artemis {
      * Building Blocks (Activity 5)
      * Player 2
      */
-    //% block="`Generics.testBlockStrength` test block-strength"
+    //% block="`Generics.testBlockStrength` протестировать прочность блока"
     export function testBlockStrengthA5(): void {
         signalBlock(2, 5, 2, default_signal_block)
     }
@@ -604,7 +601,7 @@ namespace artemis {
      * Ice Drilling (Activity 6)
      * Player 1
      */
-    //% block="`Generics.roverMove` rover move %d by %n"
+    //% block="`Generics.roverMove` ровер переместить %d на %n"
     export function roverMoveA6(d: FourDirectionArrows, n: number): void {
         switch (d) {
             case FourDirectionArrows.ArrowUpOrange:
@@ -626,7 +623,7 @@ namespace artemis {
      * Ice Drilling (Activity 6)
      * Player 2
      */
-    //% block="`Generics.drillDown` drill down"
+    //% block="`Generics.drillDown` бурить вниз"
     export function drillDownA6(): void {
         signalBlock(0, 6, 2, default_signal_block)
     }
@@ -635,7 +632,7 @@ namespace artemis {
      * Ice Drilling (Activity 6)
      * Player 2
      */
-    //% block="`Generics.collectSample` collect sample"
+    //% block="`Generics.collectSample` собрать образец"
     export function collectSampleA6(): void {
         signalBlock(1, 6, 2, default_signal_block)
     }
@@ -643,7 +640,7 @@ namespace artemis {
     /**
      * Moon Mapping (Activity 8) Player 1
      */
-    //% block="`Generics.markLocation` mark location $x_axis $y_axis"
+    //% block="`Generics.markLocation` отметить местоположение $x_axis $y_axis"
     export function setLocationA8P1(x_axis: matrix_x_axis_full, y_axis: matrix_y_axis_full): void {
         signalBlock(0, 8, 1, blocks.blockWithData(blocks.blockById(x_axis), y_axis))
     }
@@ -651,7 +648,7 @@ namespace artemis {
     /**
      * Moon Mapping (Activity 8) Player 2
      */
-    //% block="`Generics.takePicture` take picture"
+    //% block="`Generics.takePicture` сделать снимок"
     export function takePictureA8P2(): void {
         signalBlock(0, 8, 2, default_signal_block)
     }
@@ -660,7 +657,7 @@ namespace artemis {
      * Moon Mapping (Activity 8) Player 2
      * Player 1
      */
-    //% block="`Generics.viperMove` VIPER move %d by %n"
+    //% block="`Generics.viperMove` VIPER переместить %d на %n"
     export function viperMoveA8P2(d: FourDirectionArrows, n: number): void {
         switch (d) {
             case FourDirectionArrows.ArrowUpOrange:
@@ -682,7 +679,7 @@ namespace artemis {
      * Crew Meals (Activity 9)
      * Player 1
      */
-    //% block="`Generics.PowerSwitch` toggle power %i"
+    //% block="`Generics.PowerSwitch` переключить питание %i"
     export function togglePowerA9P1(i: onOffToggle): void {
         switch (i) {
             case onOffToggle.a:
@@ -698,7 +695,7 @@ namespace artemis {
      * Crew Meals (Activity 9)
      * Player 1
      */
-    //% block="`Generics.place` place freeze-dried %i"
+    //% block="`Generics.place` разместить замороженный %i"
     export function placeIngredientA9P1(i: CrewMealIngredients): void {
         switch (i) {
             case CrewMealIngredients.PlacePeanut:
@@ -717,7 +714,7 @@ namespace artemis {
      * Crew Meals (Activity 9)
      * Player 1
      */
-    //% block="`Generics.Rehydrate` rehydrate with %i water"
+    //% block="`Generics.Rehydrate` регидрировать с %i водой"
     export function rehydrateA9P1(i: RehydrationOptions): void {
         switch (i) {
             case RehydrationOptions.A25ML:
@@ -739,7 +736,7 @@ namespace artemis {
      * Crew Meals (Activity 9)
      * Player 2
      */
-    //% block="`Generics.plus` add %i"
+    //% block="`Generics.plus` добавить %i"
     export function addIngredientsA9P2(i: CrewMealAddIngredients): void {
         switch (i) {
             case CrewMealAddIngredients.AddAnchovies:
@@ -761,7 +758,7 @@ namespace artemis {
      * Crew Meals (Activity 9)
      * Player 2
      */
-    //% block="`Generics.pizzaServe` serve pizza"
+    //% block="`Generics.pizzaServe` подать пиццу"
     export function servePizzaA9P2(): void {
         signalBlock(1, 9, 2, default_signal_block)
     }
@@ -769,7 +766,7 @@ namespace artemis {
     /**
      * Asteroid Mining (Activity 12)
      */
-    //% block="`Generics.mineBlock` mine asteroid"
+    //% block="`Generics.mineBlock` добыть астероид"
     export function mineAsteroidA12(): void {
         signalBlock(0, 12, 1, default_signal_block)
     }
@@ -778,7 +775,7 @@ namespace artemis {
      * Lunar Garden (Activity 13)
      * Player 1
      */
-    //% block="`Generics.agentMove` agent move %d by %n"
+    //% block="`Generics.agentMove` агент переместить %d на %n"
     export function agentMoveA13(d: FourDirectionArrows, n: number): void {
         switch (d) {
             case FourDirectionArrows.ArrowUpOrange:
@@ -799,7 +796,7 @@ namespace artemis {
     /**
      * Water Recycling (Activity 20)
      */
-    //% block="`Generics.agentMove` agent move %d by %n"
+    //% block="`Generics.agentMove` агент переместить %d на %n"
     export function agentMoveA20(d: FourDirectionArrows, n: number): void {
         switch (d) {
             case FourDirectionArrows.ArrowUpOrange:
@@ -820,7 +817,7 @@ namespace artemis {
     /**
      * Water Recycling (Activity 20)
      */
-    //% block="`Generics.removeDebris` remove debris"
+    //% block="`Generics.removeDebris` убрать обломки"
     export function removeDebrisA20(): void {
         signalBlock(0, 20, 1, default_signal_block)
     }
@@ -828,7 +825,7 @@ namespace artemis {
     /**
      * Lunar Garden 1 (Activity 13)
      */
-    //% block="`Generics.plantSeed` plant seed"
+    //% block="`Generics.plantSeed` посадить семя"
     export function lunarGarden1A13(): void {
         signalBlock(0, 13, 1, default_signal_block)
     }
@@ -837,7 +834,7 @@ namespace artemis {
      * ISS Help (Activity 21)
      * GOAL Blue
      */
-    //% block="`Generics.retrieveCargo` retrieve cargo %c"
+    //% block="`Generics.retrieveCargo` забрать груз %c"
     export function retrieveBlueGoalA21(c: IssHelpColors): void {
         let docking_ring = RED_CONCRETE
         switch (c) {
@@ -853,7 +850,7 @@ namespace artemis {
      * ISS Help (Activity 21)
      * GOAL Yellow
      */
-    //% block="`Generics.retrieveCargo` retrieve cargo %i"
+    //% block="`Generics.retrieveCargo` забрать груз %i"
     export function retrieveYellowGoalA21(c: IssHelpColors): void {
         let docking_ring = RED_CONCRETE
         switch (c) {
@@ -868,7 +865,7 @@ namespace artemis {
      * ISS Help (Activity 21)
      * GOAL Magenta
      */
-    //% block="`Generics.retrieveCargo` retrieve cargo %i"
+    //% block="`Generics.retrieveCargo` забрать груз %i"
     export function retrieveMagentaGoalA21(c: IssHelpColors): void {
         let docking_ring = RED_CONCRETE
         switch (c) {
@@ -884,16 +881,15 @@ namespace artemis {
      * ISS Help (Activity 21)
      * load cargo
      */
-    //% block="`Generics.loadCargo` load cargo"
+    //% block="`Generics.loadCargo` загрузить груз"
     export function loadCargoA21(): void {
         signalBlock(0, 21, 1, ORANGE_CONCRETE)
     }
 
-
     /**
      * Agent Move Footsize 1
      */
-    //% block="`Generics.agentMove` agent move %d by %n"
+    //% block="`Generics.agentMove` агент переместить %d на %n"
     export function agentMoveFoot1(d: FourDirectionArrows, n: number): void {
         switch (d) {
             case FourDirectionArrows.ArrowUpOrange:
@@ -914,7 +910,7 @@ namespace artemis {
     /**
      * Agent Move Footsize 3
      */
-    //% block="`Generics.agentMove` agent move %d by %n"
+    //% block="`Generics.agentMove` агент переместить %d на %n"
     export function agentMoveFoot3(d: FourDirectionArrows, n: number): void {
         switch (d) {
             case FourDirectionArrows.ArrowUpOrange:
@@ -936,7 +932,7 @@ namespace artemis {
     /**
      * Space Junk (Activity 16) ADRV Move
      */
-    //% block="`Generics.agentMove` agent move %d by %n"
+    //% block="`Generics.agentMove` агент переместить %d на %n"
     export function adrvMoveA16(d: FourDirectionArrows, n: number): void {
         switch (d) {
             case FourDirectionArrows.ArrowUpOrange:
@@ -957,7 +953,7 @@ namespace artemis {
     /**
      * Asteroid Mining (Activity 12) Rover Move
      */
-    //% block="`Generics.roverMove` rover move %d by %n"
+    //% block="`Generics.roverMove` ровер переместить %d на %n"
     export function roverMoveA12(d: FourDirectionArrows, n: number): void {
         switch (d) {
             case FourDirectionArrows.ArrowUpOrange:
@@ -975,11 +971,10 @@ namespace artemis {
         }
     }
 
-
     /**
      * Mars Recon (Activity 11) Rover Move
      */
-    //% block="`Generics.ingenuityMove` Ingenuity move %d by %n"
+    //% block="`Generics.ingenuityMove` Ingenuity переместить %d на %n"
     export function roverMoveA11(d: FourDirectionArrows, n: number): void {
         switch (d) {
             case FourDirectionArrows.ArrowUpOrange:
@@ -1000,7 +995,7 @@ namespace artemis {
     /**
      * Aurora Pictures (Activity 14)
      */
-    //% block="`Generics.takePicture` take picture $x_axis $y_axis"
+    //% block="`Generics.takePicture` сделать снимок $x_axis $y_axis"
     export function takePictureA14(x_axis: matrix_x_axis_full, y_axis: matrix_y_axis_full): void {
         signalBlock(0, 14, 1, blocks.blockWithData(blocks.blockById(x_axis), y_axis))
     }
@@ -1008,7 +1003,7 @@ namespace artemis {
     /**
      * Orion Splashdown (Activity 15)
      */
-    //% block="`Generics.markLocation` set location $x_axis $y_axis"
+    //% block="`Generics.markLocation` установить местоположение $x_axis $y_axis"
     export function setLocationA15(x_axis: matrix_x_axis_full, y_axis: matrix_y_axis_full): void {
         signalBlock(0, 15, 1, blocks.blockWithData(blocks.blockById(x_axis), y_axis))
     }
@@ -1016,7 +1011,7 @@ namespace artemis {
     /**
      * Landing Site (Activity 17)
      */
-    //% block="`Generics.markLocation` mark location $x_axis $y_axis"
+    //% block="`Generics.markLocation` отметить местоположение $x_axis $y_axis"
     export function markLocationA17(x_axis: matrix_x_axis_full, y_axis: matrix_y_axis_full): void {
         signalBlock(0, 17, 1, blocks.blockWithData(blocks.blockById(x_axis), y_axis))
     }
@@ -1024,7 +1019,7 @@ namespace artemis {
     /**
      * Earth's Pollution (Activity 18)
      */
-    //% block="`Generics.deployCubesat` deploy CubeSat $x_axis $y_axis"
+    //% block="`Generics.deployCubesat` развернуть CubeSat $x_axis $y_axis"
     export function deployCubsatA18(x_axis: matrix_x_axis_full, y_axis: matrix_y_axis_full): void {
         signalBlock(0, 18, 1, blocks.blockWithData(blocks.blockById(x_axis), y_axis))
     }
@@ -1032,7 +1027,7 @@ namespace artemis {
     /**
      * Laser Alignment (Activity 19)
      */
-    //% block="`Generics.setAlignment` set alignment to $x_axis $y_axis"
+    //% block="`Generics.setAlignment` установить выравнивание на $x_axis $y_axis"
     export function setAlignmentA19(x_axis: matrix_x_axis_full, y_axis: matrix_y_axis_full): void {
         signalBlock(0, 19, 1, blocks.blockWithData(blocks.blockById(x_axis), y_axis))
     }
