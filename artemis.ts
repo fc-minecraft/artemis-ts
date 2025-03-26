@@ -437,6 +437,7 @@ namespace artemis {
     export function clearShelterA3P2(): void {
         signalBlock(0, 3, 2, default_signal_block)
     }
+    
 
     /**
      * Radiation Drill (Activity 3)
@@ -557,6 +558,41 @@ namespace artemis {
                 break;
             case FourDirectionArrows.ArrowLeftBlue:
                 agent.move(SixDirection.Left, n * 3)
+                break;
+        }
+    }
+
+
+    /**
+     * Building Blocks (Activity 5)
+     * Player 1
+     */
+    //% block="`Generics.roverMove` ровер переместить %d на %n"
+    export function HroverMoveA5(d: FourDirectionArrows, n: number): void {
+        // Проверка перед выполнением кода
+        let time: number;
+        // Время для прохождения 3 блоков (по условию задачи)
+        time = n / 2; // Мы знаем, что правильная скорость 2 для выполнения за 2 единицы времени
+
+        // Проверяем, что время <= 2
+        if (time > 2) {
+            console.log("Ошибка! Ровер не успеет собрать все кучи вовремя.");
+            return; // Задание не выполнено, если время больше 2
+        }
+
+        // Теперь выполняем исходный код
+        switch (d) {
+            case FourDirectionArrows.ArrowUpOrange:
+                agent.move(SixDirection.Up, n * 3);
+                break;
+            case FourDirectionArrows.ArrowDownMagenta:
+                agent.move(SixDirection.Down, n * 3);
+                break;
+            case FourDirectionArrows.ArrowRightYellow:
+                agent.move(SixDirection.Right, n * 3);
+                break;
+            case FourDirectionArrows.ArrowLeftBlue:
+                agent.move(SixDirection.Left, n * 3);
                 break;
         }
     }
