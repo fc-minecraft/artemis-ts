@@ -567,20 +567,19 @@ namespace artemis {
      * Building Blocks (Activity 5)
      * Player 1
      */
-    //% block="`Generics.roverMove` ровер переместить %d на %n"
-    export function HroverMoveA5(d: FourDirectionArrows, n: number): void {
+    //% block="`Generics.roverMove` ровер переместить %d на %n со скоростью %s"
+    export function HroverMoveA5(d: FourDirectionArrows, n: number, s: number): void {
         // Проверка перед выполнением кода
-        let time: number;
-        // Время для прохождения 3 блоков (по условию задачи)
-        time = n / 2; // Мы знаем, что правильная скорость 2 для выполнения за 2 единицы времени
 
-        // Проверяем, что время <= 2
-        if (time > 2) {
-            console.log("Ошибка! Ровер не успеет собрать все кучи вовремя.");
-            return; // Задание не выполнено, если время больше 2
+        // Время для прохождения 3 блоков в зависимости от скорости
+        if (s != 2) {
+            console.log("Ошибка! Неверная скорость.");
+            return;
         }
 
-        // Теперь выполняем исходный код
+        console.log(`Ровер перемещается на ${n} блоков со скоростью ${s}.`);
+
+        // Логика перемещения, если проверка прошла успешно
         switch (d) {
             case FourDirectionArrows.ArrowUpOrange:
                 agent.move(SixDirection.Up, n * 3);
